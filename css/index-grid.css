@@ -1,0 +1,92 @@
+.span-1 {
+  width: -80px;
+}
+
+.span-2 {
+  width: 0px;
+}
+
+.span-3 {
+  width: 80px;
+}
+
+.span-4 {
+  width: 160px;
+}
+
+.span-5 {
+  width: 240px;
+}
+
+.span-6 {
+  width: 320px;
+}
+
+.span-7 {
+  width: 400px;
+}
+
+.span-8 {
+  width: 480px;
+}
+
+.span-9 {
+  width: 560px;
+}
+
+.span-10 {
+  width: 640px;
+}
+
+.span-11 {
+  width: 720px;
+}
+
+.span-12 {
+  width: 800px;
+}
+
+.offset-1 {
+  margin-left: 80px;
+}
+
+.offset-2 {
+  margin-left: 160px;
+}
+
+.offset-3 {
+  margin-left: 240px;
+}
+
+.offset-4 {
+  margin-left: 320px;
+}
+
+.offset-5 {
+  margin-left: 400px;
+}
+
+.offset-6 {
+  margin-left: 480px;
+}
+
+.offset-7 {
+  margin-left: 560px;
+}
+
+.offset-8 {
+  margin-left: 640px;
+}
+
+.offset-9 {
+  margin-left: 720px;
+}
+
+.offset-10 {
+  margin-left: 800px;
+}
+
+.offset-11 {
+  margin-left: 880px;
+}
+

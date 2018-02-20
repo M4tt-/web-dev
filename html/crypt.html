@@ -1,0 +1,721 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Runyon's Realm</title>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400" rel="stylesheet" type="text/css">
+   <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/crypt.css">
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script 
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      $(".sh-section-btn").on("click",function(){
+        $(this).parent().children(".h-section-cont").slideToggle(200);
+      });
+    });
+  </script>
+  <script>
+	  function showHide(shID) {
+		if (document.getElementById(shID)) {
+			if (document.getElementById(shID+'-show').style.display != 'none') {
+				document.getElementById(shID+'-show').style.display = 'none';
+				document.getElementById(shID).style.display = 'block';
+			}
+			else {
+				document.getElementById(shID+'-show').style.display = 'inline';
+				document.getElementById(shID).style.display = 'none';
+			}
+		}
+	  }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+  </script>
+</head>
+<body class="body page-index clearfix">
+  <div class="container clearfix">
+    <div class="footer clearfix">
+      <p class="text"><em>This is a personal web site. Blog posts, tutorials, and all other written content
+	  (including web site design and development) has been exclusively authored by Matt Runyon.
+	  The views expressed herein are solely those of the author and not of any organization that the author is affiliated with.
+	  They are also subject to change over time.</em>
+	  </p>
+    </div>
+    <p class="rightpanetitle RightPane-1"><b>Matt Runyon</b></p>
+    <button onClick="window.location='nutrition.php';" class="_button _button-1">Nutrition</button>
+    <button onClick="window.location='crypt.html';" class="_button _button-2">Cryptography</button>
+    <button onClick="window.location='physics.html';" class="_button _button-3">Physics</button>
+	<button onClick="window.location='fitness.html';" class="_button _button-4">Fitness</button>
+	<button onClick="window.location='tribes.html';" class="_button _button-5">Tribes</button>
+	<button onClick="window.location='aoe.html';" class="_button _button-6">Age of Empires</button>
+	<button onClick="window.location='machinelearning.html';" class="_button _button-7">Machine Learning</button>
+    <p class="contactlink"><a href="contact.html">Contact</a></p>
+    <p class="aboutpagelink"><a href="about.html">About This Page</a></p>
+    <p onClick="window.location='https://drive.google.com/open?id=0B_Fe1ZT6AqgZVGNvYTZ6dTJDNWc';" class="cvlink">Curriculum Vitae</p>
+    <p class="homelink"><a href="index.php">Blog</a></p>
+    <div class="rightbar clearfix">
+      <div class="rightbarcontent"></div>
+      <p class="aboutmatttext">Hi! <br><br>Welcome to my spot on the 'net. <br><br><u>Bio</u></p>
+	  <p class="biotext"><br>Matt Runyon is a Canadian engineer who is passionate about science, technology, fitness, and adventure.
+	  He holds a B. Eng. in Engineering Physics from Carleton University and a M.Sc. in Physics from the University of Ottawa.
+	  </p>
+    </div>
+    <p class="tutorialtitle tutorialtitle-2">Tutorials<br><br><br><br><br>Gaming</p>
+    <div class="leftbar"></div>
+    <div class="buttons"></div>
+    <div class="frontimage"></div>
+    <div class="menu"></div>
+    <div class="blog">
+	  <h1 style="font-size:1.5em;font-weight: bold;text-align:center;"><u>Cryptography</u></h1>
+		<p style="padding-top:10px;">
+		  I became interested in cryptography towards the end of my B.Eng, but even more so in grad school. It's a very intriguing and diverse field; 
+		  it combines pure mathematics, computer science, electrical engineering. It involves espionage, 'social engineering', the practice of deceit. 
+		  There's always room for creativity, too. In fact, the biggest threat to creating a cryptographically sound encryption scheme is the creativity of
+		  adversaries -- even if an encryption algorithm is mathematically unbreakable, the implementation or improper use of it is often where crypto fails. 
+		  Hackers continually demonstrate creativity to get the informaton they're after. It's a wondrous game of cat and mouse, but, unfortunately, the game often has
+		  high stakes.
+		</p>
+		<p style="padding-top:10px;">
+		  <u>What you'll find here:</u>
+		  <ol>
+		    <li><a href="crypt.html#Basics">Basics of Cryptography</a></li>
+			<li><a href="crypt.html#Ciphers">Ciphers: XOR, Rijndael, and Modes of Operation</a></li>
+			<li><a href="crypt.html#DigSig">Digital Signatures</a></li>
+			<li><a href="crypt.html#Hash">Hash Functions</a></li>
+			<li><a href="crypt.html#Flame">Case Study: Flame Malware (2012)</a></li>
+			<li><a href="crypt.html#DH">Diffie-Hellman Key Exchange</a></li>
+			<li><a href="crypt.html#QuantumCrypto">Quantum Cryptography</a></li>
+		  </ol>
+		<p style="padding-top:10px;">
+		  For anyone who is interested, I have also written a small cryptographic library in C which can be downloaded from my GitHub account
+		  <a href="https://github.com/M4tt-/crypto" target="_blank">here</a>. Just read the README.txt. Particular library functions may be mentioned throughout
+		  the sections listed above. Additionally, I have most of the information here and more compiled into printable, hand-written notes that you can download 
+		  <a href="cryptonotes.pdf">here</a>.
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Basics"><u>1. Basics of Cryptography</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <b>Cryptography</b> is the study of secure communication. You may also hear the word <i>cryptology</i> thrown around - the two are often used
+		  interchangeably, though I believe a distinction should be made. Crypto<i>logy</i> is often referred to as the study of codes in
+		  a more abstract and (meta-)mathematical sense, whereas crypto<i>graphy</i> is more concerned with actually creating and implementing the codes. My argument
+		  for this is the etymology of each word, or their respective suffixes, in particular: the <i>-logy</i> suffix refers to a particular subject itself, and the 
+		  <i>-graphy</i> suffix refers to the study of a particular subject. The term <i>cryptanalysis</i> generally refers to the breaking of codes and people who try to
+		  do so are known as cryptanalysts.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Cryptography cares about the following with respect to communication:
+		  <ol>
+		    <li><b>Confidentiality</b> -- sent messages should remain between the sender and the intended recipient(s) (the conversants)</li>
+			<li><b>Authentication</b> -- the conversants should be able to verify the authenticity of each conversant's identity</li>
+			<li><b>Integrity</b> -- the conversants should be assured that their communication has not been tampered with in transit</li>
+			<li><b>Non-repudiation</b> -- the sender of a message should not be able to later deny having sent a particular message</li>
+		  </ol>
+		  </p>
+		  <p style="padding-top:10px;">
+		  Confidentiality is achieved through encryption/decryption. Encryption is the process of the 'hiding' a message with some mathematics, and decryption
+		  is the process of retrieving the original message from an encrypted message. We call an unencrypted, initial message the 'plaintext' in communication,
+		  and we call the encrypted message the 'ciphertext'. Both encryption and decryption rely on some 'key' that the mathematics rely on as illustrated by the
+		  figures below:
+		</p>
+		<img src="images/encryption.jpg" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:417px; width:550px;">
+		<p style="text-align: center;font-size:0.8em;">The encryption process</p>
+		<img src="images/decryption.jpg" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:417px; width:550px;">
+		<p style="text-align: center;font-size:0.8em;">The decryption process</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The black box contains some mathematical function that maps each chunk of letters to other chunks of letters (or other symbols).
+		  It's intuitive to think that if people do not know what is actually going on inside the black box, then decrypting the message would be harder.
+		  While this is true, it is a very bad rule to follow. There is a saying in cryptography (known as <i>Kerckhoff's Assumption</i>) that if the security
+		  of an algorithm lies in its hidden, restricted nature, then you'v already lost. You should assume your adversaries know what's going on in the black box,
+		  and I discuss exactly that in the next <a href="crypt.html#Ciphers">section on ciphers</a>.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The encryption and decryptions schemes shown above vary a little bit depending on the <i>cyptosystem</i> that is being used. A cryptosystem is defined by
+		  the collection of possible plaintexts, ciphertexts, keys, encryption functions, and decryption functions that are available for use. More formally, we say that
+		  a cryptosystem is defined by a <i>tuple</i>, $$(P,C,K,E_k,D_k)$$ where $$P \text{ is the plaintext space}$$ $$C \text{ is the ciphertext space}$$
+		  $$K \text{ is the key space}$$ $$E_k: P \to C \text{ with } k \in K$$ $$D_k: C \to P \text{ with } k \in K$$
+		  There is a dichotomy among cryptosystems. Each cryptosystem is either a <b>'public-key' (asymmetric)</b> cryptosystem, or it is a <b>'private-key' (symmetric)</b> cryptosystem.
+		  The main difference between the two lies in the keys. In the case of a private-key cryptosystem, we have $$ k = k' $$ so that $$ E_k = D_k^{-1} $$
+		  In other words, the key used for encryption is the same as the key for decryption. In this way, the encryption and decryption functions can be derived from one another.
+		  For a public-key cryptosystem, each user has two distinct keys, i.e. $$ k \ne k' $$ One key (k') is used for <b>decryption</b>, and this is known as the user's
+		  <b>private key</b> -- the user is not to share this private key with anyone. The user's other key (k) is used for encryption, and this key is public knowledge.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Here's how the encryption and decryption processes work with public key cryptography:
+		  <ol>
+		    <li>Alice wants to send a message, <b><i>M</i></b>, to Bob.</li>
+			<li>She obtains Bob's public key and encrypts her message with it: \(C=E_k^B(M)\)</li>
+			<li>Bob receives C and decrypts it with his private key: \(M=D_{k'}^B(C)\)</li>
+		  </ol>
+		</p>
+		<p style="padding-top:10px;">
+		  If Bob wanted to send a message to Alice, he would use Alice's public key for encryption and Alice would use her private key for decryption.
+		  An interesting feature of public-key cryptography is that the user does not generally use their public key at all for communication - they simply make it available
+		  to others. It is also worth noting that public key cryptography is often used to encrypt keys rather than messages.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Private key cryptosystems rely on only one key, and therefore it is pivotal that this key be kept a secret between its users -- anyone who has the key can eavesdrop
+		  on a conversation if it is intercepted. Here's how the encryption and decryption processes work with private key cryptography:
+		  <ol>
+		    <li>Alice and Bob want to converse.</li>
+			<li>Alice and Bob agree on a key, <b><i>k</i></b>.</li>
+			<li>Alice encrypts a message with the shared key, \(C=E_k(M)\)</li>
+			<li>Bob decrypts the message with the shared key, \(M=D_k(C)\)</li>
+		  </ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In general, private key cryptography is faster than public key. The trouble is ensuring that the keys can be distributed in a secure manner - one way to address this
+		  difficulty is with the <a href="crypt.html#DH">Diffie-Hellman Key Exchange</a>.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The most trivial cryptanalysis that can be performed on either public or private key cryptography is what is known as a <i>brute-force attack</i>. With one exception*,
+		  every cryptosystem can be broken by brute-force, which is simply the process of trying every single key in the key space until decryption is successful. 
+		  If the key is <b><i>N</b></i> bits long, there are \(2^N\) possible keys. It is often assumed that the probability of <i>guessing</i> the key this
+		  way is \(2^{-N}\). In other words, the cardinality of the keyspace is $$ |K|=2^N $$ Other cryptanalytic
+		  attacks are often categorized into the following groups:
+		  <ol>
+		    <li><b>Known Ciphertext Attack</b> – cryptanalyst only has ciphertext to try and deduce key</li>
+			<li><b>Known Plaintext Attack</b> – cryptanalyst has ciphertext and corresponding plaintext of at least one message</li>
+			<li><b>Chosen-Plaintext Attack</b> – cryptanalyst can obtain ciphertexts for arbitrary plaintexts of his/her choosing</li>
+			<li><b>Chosen-Ciphertext Attack</b> – cryptanalyst can obtain plaintexts for arbitrary ciphertexts of his/her choosing</li>
+			<li><b>Chosen-Key Attack</b> - cryptanalyst has some knowledge of the relationship between different keys.</li>
+			<li><b>Rubber Hose Cryptanalysis</b> - cryptanalyst extracts information from an informant by bribery, extortion, intimidation, etc.</li>
+		  </ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Any method that can determine the key in a cryptographic protocol, or even any method that can reliably determine the plaintext from the ciphertext
+		  in a cryptographic protocol with less complexity than a brute-force attack is known as a <b>break</b>.
+		</p>
+		<p style="padding-bottom:6px;font-size:0.8em;">
+		  *The <i>one-time pad (OTP)</i> is the only true unbreakable cipher. You can read about it <a href="https://en.wikipedia.org/wiki/One-time_pad" target="_blank">here</a>.
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Ciphers"><u>2. Ciphers: XOR, Rijndael, Modes of Operation</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  A cipher is a cryptographic algorithm used for encryption and/or decryption - the cipher belongs in the black box in the figures i the last section.
+		  It can be written down as a mathematical function, recursive or otherwise, and is deterministic. As mentioned before, it should be assumed that the
+		  cipher is public knowledge; it's one thing to force adversaries to use alternate means of breaking encryption when the algorithm is inaccessible (and this is definitely a 
+		  <i>thing</i> in crypto - it's referred to as a <b>side-channel attack</b>. Check out this <a href="
+		  https://www.extremetech.com/extreme/173108-researchers-crack-the-worlds-toughest-encryption-by-listening-to-the-tiny-sounds-made-by-your-computers-cpu"
+		   target="_blank">article</a> on breaking RSA for a really cool example.), but it really speaks to the strength of an algorithm if its operation is
+		  known in complete detail but still cannot be broken!
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Ciphers generally incorporate of at least one (if not all) of the following three parts:
+		    <ol>
+			  <li>Substitution</li>
+			  <li>Permutation</li>
+			  <li>Bitwise/Modular Mathematical Operations (with or without a key)</li>
+			</ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In a pure substitution cipher, each symbol (or group of symbols) in the plaintext is mapped to another symbol or group of symbols. In a pure permutation cipher,
+		  each symbol (or group of symbols) is <i>jumbled</i> out of its initial order. In the absence of either of these two operations, one minimally requires some sort
+		  of other mathematical operation. The most commonly (and trivially) used operation is the <b>bitwise exclusive-or (XOR)</b> function.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Ciphers are classified as either <b>block ciphers</b> or <b>stream ciphers</b>. The former refers to ciphers that operate on blocks of bytes (remember, 8 bits in a byte).
+		  Stream ciphers refer to ciphers that operate on individual bytes. There are many, many different ciphers in the wild, but it seems that block ciphers have found more use
+		  in society.
+		</p>
+		<h3 style="padding-top: 20px;font-size:1.0em;font-weight: bold;text-align:center;"><u>XOR Ciphers</u></a></h3>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  You must bear in mind that all telecommunication boils down to binary at some point. For the inexperienced, binary in this sense refers to the fact that all
+		  information is represented as 1's and 0's - or <i>bits</i>. For example, the word 'love' written in binary* is $$ 01101100 01101111 01110110 01100101 $$ The reason why 1's
+		  and 0's are used is because that is how computers, or electronics in general, can understand information and convert it into information that humans understand.
+		  That means that the email or text you just sent in ASCII text was eventually converted to 1's and 0's. Each line of code you write is the same.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Because of this, bitwise operators provide an easy way to encrypt information. The XOR operation between two bits is defined as follows:
+		  <img src="images/XOR.gif" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:300px; width:250px;">
+		  Encryption with the XOR cipher results in a symmetric cipher; to encrypt, the plaintext is XOR'd with some key of the same size. To decrypt, the ciphertext is XOR'd
+		  with the same key to reveal the plaintext. For example, let's say we want to encrypt the word 'love'. Its binary representation was already given above, so we just
+		  need to find a key with the same number of bits -- how about the word 'hate'? In binary, 'hate' is given by $$ 01101000 01100001 01110100 01100101 $$ Now let's XOR these 
+		  together: $$ \text{plaintext} \oplus \text{key} = \text{ciphertext} $$ Here, $$ \text{love} \oplus \text{hate} = \text{ciphertext} $$ 
+		  In binary, $$ 01101100 01101111 01110110 01100101 $$ $$ \oplus \text{ } 01101000 01100001 01110100 01100101 $$
+		  $$ = 00000100000011100000001000000000 $$ When we attempt to convert the resulting binary string to ASCII, we get nonsense (you can try for yourself on an online
+		  converter, such as <a href="http://www.binaryhexconverter.com/binary-to-ascii-text-converter"target="_blank">this one</a>). The resulting ciphertext doesn't even map to
+		  proper ASCII - a giveaway that there is encryption afoot. However, when the ciphertext is XOR'd with the key ('hate') once again, the plaintext will be revealed:
+		  $$ \text{ciphertext} \oplus \text{key} = \text{plaintext} $$ $$ 00000100000011100000001000000000 $$ $$\oplus \text{ } 01101000 01100001 01110100 01100101 $$
+		  $$ = 01101100011011110111011001100101 $$ Notice that this gives us the initial binary string back ('love'). The only thing one has to be careful of is how leading or
+		  trailing zeroes are managed. Some converters / calculators will discard leading or trailing zeroes.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  XOR ciphers are fun, but are somewhat trivial to break - all one needs is a bit of statistics. If anyone is curious how to break XOR ciphers, take a look at my
+		  <a href="https://github.com/M4tt-/crypto" target="_blank">crypto library</a> - I have developed a suite of functions designed for breaking XOR ciphers. The main
+		  tool to do so is <a href="https://en.wikipedia.org/wiki/Frequency_analysis" target="_blank">frequency analysis</a>. The basic principle is that some letters
+		  naturally occur more than others in each language. The occurences of each letter form a reliable distribution in any text. One simply tries many keys and checks
+		  whether or not the resulting distribution of letters matches the <b><i>'ETAOIN SHRDLU'</b></i> scheme (more on that <a href="https://en.wikipedia.org/wiki/Letter_frequency" 
+		  target="_blank")>here</a>). More complicated XOR ciphers may incorporate more sophisticated techniques, such as computing the average 
+		  <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank">Hamming distance</a> in order to determine the most probable key size if this is unknown.
+		</p>
+		<h3 style="padding-top: 20px;font-size:1.0em;font-weight: bold;text-align:center;"><u>Rijndael Cipher</u></a></h3>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Now that you've been eased into ciphers, it's time to throw the kitchen sink at you with <i>Rijndael</i>. The Rijndael cipher is the backbone of what is known as the 
+		  Advanced Encryption Standard (AES) - the thing that the majority of the modern world uses (this section was written in 2017 ...) for encryption. It was created by two
+		  Belgian cryptographers in the early 2000's when the National Institute of Standards and Technology (NIST) called for submissions for a new cryptographic standard. 
+		  It is a block cipher that operates on 128-bit blocks and makes use of substitution, permutation, bitwise XOR, and modular multiplication. Not only that, but the
+		  designated key that is used for bitwise operations changes throughout intermediate steps in the algorithm's progression. It's among the best known ciphers to date.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The Rijndael cipher consists of either 10, 12, or 14 <i>rounds</i> of encryption depending on the chosen key size (128-bit, 192-bit, 256-bit, respectively). It is 
+		  useful to think of the cipher operating on a 4x4 matrix where each entry is a byte, as shown below. This is known as the <b>state</b> being operated on.
+		  <img src="images/byteMat.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:150px; width:160px;">
+		  A useful, top-level picture to have in mind about Rijndael is shown below:
+		  <img src="images/Rijndael.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:420px; width:480px;">
+		  Each round (except the last) consists of four steps:
+		  <ol>
+		    <li><b>SubBytes</b> - each byte in the state is replaced by another. The replacement is determined by a constant of the encryption scheme known as an S-Box (Substitution box).</li>
+			<li><b>ShiftRows</b> - several rows of the state are 'jumbled'. A permutation occurs.</li>
+			<li><b>MixColumns</b> - each column of the state undergoes a linear transformation (modular multiplication).</li>
+			<li><b>AddRoundKey</b> - each byte in the state is XOR'd with a <b>subkey</b> that is unique to each round.</li>
+		  </ol>
+		  </p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In each round, a particular key is generated from the nominal key given to the algorithm. This is the <b>subkey</b>. The manner in which it is generated involves a bit
+		  rotation (a permutation), a substitution, XOR operations, and modular exponentiation. You can read about it <a href="https://en.wikipedia.org/wiki/Rijndael_key_schedule">
+		  here</a>. The last round does not follow the above steps perfectly, rather it skips Step 3 - MixColumns. You can read more about the exact details of each of the above
+		  steps <a href="https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture8.pdf" target="_blank">here</a> - the authors of this linked document give a thorough treatment of
+		  the cipher.
+		</p>
+		<h3 style="padding-top: 20px;font-size:1.0em;font-weight: bold;text-align:center;"><u>Cipher Modes of Operation</u></a></h3>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  So you've seen two different ciphers and how they encrypt a <b>block</b> of plaintext. In the case of the XOR cipher shown, we encrypted a 4-byte message (<i>love</i>) with a 4-byte
+		  key (<i>hate</i>) - the <b>block size</b> was 4-bytes. But what if the message was some longer message with an arbitrary length? With the same 4-byte key, we would have many more blocks
+		  to repeatedly encrypt (and, ideally, the message would be a multiple of 4-bytes to make this convenient. It is common to employ <a href="
+		  https://en.wikipedia.org/wiki/Padding_(cryptography)#Block_cipher_mode_of_operation" target="_blank">padding</a> to ensure this convenience). The method in which the cipher is repeatedly 
+		  executed in order to encrypt a message is known as the <b>cipher mode of operation</b>. While there are many modes in the wild, there are four modes that are common in cryptography:
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>1. Electronic Codebook Mode (ECB)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  ECB is the most simple mode of operation. Here, identical blocks of plaintext encrypt to identical blocks of ciphertext - there's no source of <i>feedback/feed-forward</i> to complicate
+		  things. This mode of operation functions as though there is a look-up table (LUT) for plaintext to ciphertext. If the block size is \(N\) bits, then the LUT would have \(2^N\) 
+		  entries.
+		  <img src="images/ECB.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:200px; width:140px;">
+		  <p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    ECB mode. Here, \(P_i\) denotes the \(i^{th}\) plaintext block, \(C_i\) denotes the resulting ciphertext block, \(k\) denotes the key, and \(E_k\) is the cipher's encryption function.
+			For each \(P_i = P_{i'}\), we have \(C_i = C_{i'}\) for \(i \in \mathbb{Z}\).
+		  </p>
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>2. Cipher Block Chaining (CBC)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  CBC is more complicated than ECB. What happens here is that the ciphertext from one message block's encryption influences the encryption of the next message block -
+		  the next message block is XOR'd with the previous block's ciphertext. This <i>chains</i> together each block in the message and adds a layer of complexity
+		  to the cipher. Since the first message block would not have a 'previous' block to help encryption, an <b>initalization vector (IV)</b> is used. An IV
+		  is just a fixed-length bitstream. It's not chosen completely arbitrarily -- an IV with only zeros or ones could lead to an easier break than something truly random.
+		  <img src="images/CBC.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:260px; width:410px;">
+		  <p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    CBC mode. 
+		  </p>
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>3. Cipher Feedback (CFB)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  CFB mode is a way to implement a block cipher as a sort of stream cipher. Here, data can be encrypted in units smaller than a nominal block size.
+		  Some number of bits in a shift register are encrypted, then the XOR between these encrypted bits and some plaintext bits produces the ciphertext.
+		  The ciphertext is then fed back into the shift register for subsequent encryptions. Just as with CBC mode, an IV is needed for the first message block.
+		  <img src="images/CFB.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:280px; width:290px;">
+		  <p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    CFB mode. 
+		  </p>
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>4. Output Feedback (OFB)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  OFB mode is sometimes called <i>internal feedback mode</i>. It involves a feedback mechanism that is indepedenyt of the plaintext or ciphertext.
+		  It is otherwise the same as CFB.
+		  <img src="images/OFB.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:280px; width:290px;">
+		  <p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    OFB mode. 
+		  </p>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  There are many ciphers and modes of operation in the wild - one is only limited by their creativity. 
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="DigSig"><u>3. Digital Signatures</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Everyone is familiar with a signature -- it is supposed to be a unique symbol that identifies the individual writing it. With so much online interaction, it would also be nice to
+		  have a means to digitally identify an individual or organization in a similar manner without even needing to leave your desk. While you may not know it, your computer checks 
+		  the signatures of web sites and direct <i>requests</i> all the time to make you aren't being tricked into visiting a fallacious page or downloading something unintended.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  So how can you prove your identity through a computer? One answer lies in public key cryptography (if you haven't read the previous <a href="crypt.html#Basics">section</a>,
+		  I would advise you do so before continuing). I mentioned that recipient public keys were used for encryption by a sender so that the recipient could decrypt the message with
+		  their private key. When it comes to digital signatures and public key cryptography, the roles of the keys are reversed. Someone who wishes to sign a message (or hash of a message -
+		  more on that in the next <a href="crypt.html#Hash">section</a>) can do so by encrypting the message (or hash) with their private key. When someone wants to verify that the message was
+		  sent by the suspected sender, they need only decrypt the message with the sender's public key. If successful, the recipient can safely assume the identity of the sender is authentic
+		  since they should, in principle, be the only ones with access to the encryption key.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  How exactly does your computer check the signatures of various web sites, for example? The answer is in <b>digital certificates</b>. A digital certificate, sometimes referred to as
+		  a public-key certificate, is a collection of information that reliably identifies someone or something through a trustworthy source. When you visit a secured web site, the communication
+		  with the web site is encrypted through public key cryptography (you know the web site is secure if it has the little padlock next to the correct domain name). The public key certificate
+		  that the web site presents to you contains the relevant public key (among other things) that your computer is to use for encryption. But how do you trust that the public key you are 
+		  provided really belongs to the people who you intend to communicate with, and not just an imposter? The answer is in the digital signature of the public key certificate. The very last field
+		  of the certificate contains the fingerprint of all subsequent fields before it, and it is then encrypted with a particular private key. This private key belongs to a trusted third party
+		  known as a Certificate Authority (CA). By default, all browsers have a list of trusted CA's. Whenever a public key certificate is presented, the hash of the certificate <b>before</b> the
+		  signature field is computed and compared to the hash in the signature field after decrypting it with one of the trusted CA's public keys. If these hash values match, the certificate and
+		  therefore the web site presenting it are deemed authentic.
+		</p>
+		<img src="images/x509_msdn.png" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:320px; width:340px;">
+		<p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    An X.509 public key certificate (image taken from Microsoft MSDN)
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Hash"><u>4. Hash Functions</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  A <b>hash function</b> is a mathematical function, \(H\), that takes a message, \(M\) (known as the <b>pre-image</b>), as its argument. The output of the hash function, \(H(M)\)
+		  (known as the <b>hash</b>, <b>image</b>, or <b>fingerprint</b>), is always of a particular, finite output - say \(n\) bits. The message can be of arbitrary length - say \(k\) bits:
+		  $$ H(M): \{0,1\}^k \to \{0,1\}^n $$
+		  The hash function takes a <i>fingerprint</i> of the input bit stream and converts it to something more manageable. That's the point. In cryptography and 
+		  computer science, these functions are a means of reducing complexity. In general, we'd like these functions to be bijective, but this is not
+		  impossible to achieve in the strictest sense of the word. It will suffice to make it <i>close</i> to bijective -- more on this later.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  We generally like to be a little more specific than the definition provided above. Ideally, cryptographic hash functions have the following properties:
+		  <ol>
+		    <li>It is quick and efficient to compute \(H(M)\),</li>
+			<li>The computation of \(H(M)\) is deterministic,</li>
+			<li>It is infeasible to obtain the message from the output (i.e. one cannot easily invert the hash function so that \(M=H^{-1}(H(M))\),</li>
+			<li>Similar inputs do not have similar outputs,</li>
+			<li>Given \(M\), it should not be feasible to find another \(M'\) such that \(H(M) = H(M')\),</li>
+			<li>It is infeasible to find \(M\) and \(M'\) such that \(H(M) = H(M')\).</li>
+		  </ol>
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  The third point speaks to a <b>one-way hash function</b> -- it is easy to compute the output from the input (one direction), but it is not easy to compute the
+		  input from the output (the other direction). There are some situations where this is purposely made easy, though, as in the case of <b>trap door one-way
+		  hash functions</b>:
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  Given \(H(M)\), it is difficult to find \(M=H^{-1}(H(M))\) <b>unless</b> some additional piece of information \(Y\) is known to aid in the computation.
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  <u>Example</u>
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  Let's make up a simple hash function, \(H(M)\). This hash function will produce a hash that is a sum of all the digits in the decimal
+		  representation of the message, \(M_{dec}\). This is known as the digit sum: 
+		  $$ M_{dec} \in \mathbb{Z} \text{ (k digits)} $$
+		  $$ H(M) = \sum_{i=0}^{k} \frac{1}{10^i}(M_{dec}\mod 10^{i+1}-M_{dec}\mod 10^i) \in \mathbb{Z} $$
+		  In reality, the message will always be broken down into a binary message, but since every natural number can be expressed as the sum of distinct powers of two,
+		  we know that a positive decimal representation has a unique binary representation. For simplicity, the remainder of the discussion pertains to decimal messages with the understanding
+		  that this can just as well be discussed in binary.
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  The number of possible \(k\)-digit messages \(M\) that have \(H(M) = X\) is given by N:
+		  $$ N = {{X+k-2}\choose{X-1}} $$
+		  With
+		  $$ 1 \leq X \leq 9k $$
+		  For, say, \(k = 39\) (which roughly corresponds to a 128-bit number), we have:
+		  $$ 1 \leq N \leq 6.97 \text{x} 10^{52} $$
+		  So, in principle, it is possible that it would be easy to guess \(M\) if X was sufficiently small. In order to combat this, one could add an arbitrary but constant <i>secret</i>number, \(x\), 
+		  to \(X\) so that:
+		  $$ H(M) = X' = X + x $$
+		  In the realm of cryptography, the secret value of \(x\) is sometimes referred to as <b>salt</b>.
+		</p>
+		  So for large \(k\) and large \(X'\), this hash function could be hard to invert. We could provide a <b>trap-door</b> to this hash function by:
+		  <ol style="list-style-type: lower-alpha;">
+		    <li>Providing the salt, \(x\), and/or</li>
+			<li>Providing a portion of the initial sum to reduce complexity</li>
+		  </ol>
+		  On the second point, imagine we treat the digit sum \(X\) as two distinct digit sums - one for the first \(k/2\) digits and one for the last \(k/2\) digits:
+		  $$ X = X_1 + X_2 $$
+		  $$ X_1 = \sum_{i=0}^{\frac{k}{2}-1} \frac{1}{10^i}(M_{dec}\mod 10^{i+1}-M_{dec}\mod 10^i) \in \mathbb{Z} $$
+		  $$ X_2 = \sum_{i=\frac{k}{2}}^{k} \frac{1}{10^i}(M_{dec}\mod 10^{i+1}-M_{dec}\mod 10^i) \in \mathbb{Z} $$
+		  If you were given \(H(M)\) <b>and</b>, say, \(X_1\), then there would only be one possibility for \(X_2\), namely \(X_2 = X - X_1\), and the complexity
+		  of the attack would be greatly reduced: 
+		  $$ N' = {{X_2+k/2-2}\choose{X_2-1}} $$
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  Note that the above example satisfies some of the desirable properties of hash functions, but definitely not all. It is deterministic, it is quick to compute, but it may not be overly difficult
+		  to recover the message by brute-force with the aid of a computer. More critically, it is certainly not infeasible to find two inputs with the same output. Consider the following two messages:
+		  $$ M_{dec_1} = 40448036 $$
+		  $$ M_{dec_2} = 50462084 $$
+		  In binary,
+		  $$ M_1 = 10011010010011000000100100 $$
+		  $$ M_2 = 11000000011111110110000100 $$
+		  Each of these messages will hash to the same value. To see this, identify the digit sums:
+		  $$ H(M_1) = 4+0+4+4+8+0+3+6 = 29 $$
+		  $$ H(M_2) = 5+0+4+6+2+0+8+4 = 29 $$
+		  Whenever this happens, we say that we have a <b>collision</b> - two messages that hash to the same value. Hash functions are definitely <b>not</b> supposed to do that. In fact,
+		  it was very easy for me to find two different messages that hash to the same value. This hash function does not satisfy property 4 nor 5, and is therefore said to lack <b>pre-image resistance</b>
+		  as well as <b>collision resistance</b>.
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  A cryptographic <b>break</b> in the context of hash functions refers to the existence of an efficient means of finding collisions for a hash function. 'Efficient' here refers to an 
+		  algorithm whose complexity is less than that of a <b>birthday search</b>. For those of you who are unfamiliar with the birthday search, allow me to
+		  motivate its relevance by explaining the <b>birthday paradox</b>: 		  
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  <i>How many people need to be in a room until the probability of at least one person sharing your birthday is greater than 50%?</i> 		  
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  The answer to this question is solved statistically. First, we define the number of people that need to be in the room as \(n\). We also make the assumption that the probability of
+		  any particular person having any particular birthday is equally likely (while this may not be completely true, this argument has stood up under scrutiny over the years, just go with it).
+		  Then, some <i>conditioning</i> is applied; we say that if one person does not share the same birthday as you, the likelihod of the next person sharing the same birthday as you increases.
+		  Mathematically, the probability of being in a room of \(n\) people and having one of them share your birthday is given by:
+		  $$ P(n) = 1 - \frac{364}{365}^n $$
+		  Thus, \(P(n)>= 0.5 \text{ when } n>= 253\). Okay, so there needs to be 253 people in the room for it to be pretty likely that someone shares the same birthday as you. And now for the 'paradox':
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  <i>Only 23 people need to be in the room for the probability of <b>any</b> two people sharing the same birthday to exceed 50%.</i>
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  Isn't that wild?
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  The birthday search speaks to these facts. The property of <b>pre-image resistance</b> is more lax than <b>collision resistance</b>, much like finding <b>any</b> two matching birthdays
+		  is easier than finding a <b>particular</b> matching birthday.
+		  You can see that if you are not particular about the messages (birthdays), the chances of finding a collision (birthday match) are much higher. 
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  The point of all of this is:
+        </p>
+		<p style="padding-bottom:0px;padding-top:10px;">
+		  Given an \(n\)-bit binary message, the probability of finding another \(n\)-bit binary message that hashes to the same value is \(2^-n\) - it takes \(2^n\) calls to the hash function.
+        </p>
+		<p style="padding-bottom:5px;padding-top:0px;">
+		  The probability of finding any two \(n\)-bit binary messages that hash to the same value is \(2^{\frac{-n}{2}}\) - it takes \(2^{\frac{n}{2}}\) calls to the hash function.
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  An algorithm that can find a collision with fewer than \(2^{\frac{n}{2}}\) calls is said to break the hash function.
+        </p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  On a slightly different note, there is also a fundamental data structure known as a hash table in the realm of computer science
+		  that operates on a similar principle o reduce complexity. Often data sets are stored in arrays, contiguous blocks of memory in RAM or HDD. Searching an array for a particular value means iterating
+		  through each address in the memory until it is found -- this is very inefficient. What if we knew the exact address to query for a particular value <i>a priori</i>? The 
+		  <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank">complexity</a>
+		  of the search would go from \(\mathcal{O}(n)\) (for arrays) to \(\mathcal{O}(1)\) (for hash tables)! Indeed, this can be accomplished through hash functions. Imagine that a hash table is
+		  a sort of array (a linked list, for those familar with the distinction). The index (or node) that the value should be stored in could be the hash of the value you seek to store. That way
+		  when you want to search for a particular value, just query the node that corresponds to the hash of the value.
+		</p>
+		<p style="padding-bottom:5px;padding-top:10px;">
+		  Lastly, hash functions have much applicability to digital signatures. When a user seeks to provide their digital signature, they often just sign the hash of whatever it is that needs signing.
+		  If you read the last section, this means that the signer will compute the hash of the document and then encrypt it with their private key. This is much quicker than encrypting the 
+		  entire document itself and is almost just as good if the hash function meets the desirable properties.
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Flame"><u>5. Case Study: Flame Malware (2012)</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Cybercrime is a big deal. In Canada, cyber crime is divided into two categories defined as follows:
+		</p>
+		<p style="padding-bottom:15px;padding-top:0px;">
+		  <ol>
+		    <li><b>Pure computer crimes</b>, where a computer is the object of the crime. This category includes specific new offences that target computer systems and networks. Examples are hacking,
+			denial-of-service attacks,6 and malicious dissemination of computer viruses.</li>
+			<li><b>Computer-supported crimes</b>, where a computer is the instrument used in perpetrating the crime. This category includes the use of a computer to commit such traditional offences
+			as child pornography, harassment, fraud and drug trafficking.</li>
+		  </ol>
+		</p>
+		<img src="images/cyberstats.jpg" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:500px; width:620px;">
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The first ever cybercrime prosecution was in 1989 against Robert Morris (you can read about what he did <a href="https://en.wikipedia.org/wiki/Morris_worm">here</a>). Since then, 
+		  there have been many cybercrimes attempted and completed. These have resulted in identity theft, financial theft, political statements, etc. But in the late 2000's, <b>cyberwarfare</b>
+		  became more apparent. There has been much speculation that nation states (the NSA, in particular) have developed very sophisticated malicious software packages (<i>malware</i>) to 
+		  attack international adversaries. In my humble opinion, the most sophisticated malware to ever be made publicly known (as of 2017) is referred to as Flame. In particular, the 
+		  cryptography involved that made the attack possible was truly leading edge. Here, I will discuss the relevant cryptographic aspects of the attack (I have given a talk on the
+		  cryptanalysis of Flame -- the interested reader may download my technical presentation slides <a href="MRunyon_FLAME.pdf">here</a>.)
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The malware known as Flame was discovered in May 2012. It was found in many computers throughout seven middle-eastern countries, namely Iran, Israel-Palestine, Sudan, Syria,
+		  Lebanon, Saudi Arabia, and Egypt. Each country was assumed to be a specific target. 
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Named after one of its consituent modules, Flame was designed for espionage. It would search Windows filesystems for what it deemed important files (.doc's, .pdf's, .cad's, etc.), it could
+		  enable peripheral devices such as cameras and microphones to record what is happening around infected machine, and even take screenshots of whatever activity was active on an infected
+		  machine. All of this data would be compiled into a database for convenient organization before being sent off to the authors' <i>home servers</i>. 
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  But how did Flame get put on these machines in the first place? The authors of Flame were very clever in two ways when it came to the infection process:
+		  <ul>
+		    <li>Flame was disguised as a seemingly harmless Windows Update so that it would likely be downloaded inconspicuously,</li>
+			<li>Flame was able to, in some cases, jump air gaps to infect offline computers</li>
+		  </ul>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Any Windows user is familiar with WIndows Update -- it is just an annoying prompt you autmatically receive semi-regularly to download a patch. It's so common that most do not think
+		  twice or even care about what it is they're downloading with Windows Updates. WIth Flame, the process was the exact same - users would not know any different when they were prompted
+		  with the bogus WIndows update that was going to install Flame.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  But how could someone successfully impersonate Windows and trick every user (and their machine) to allow this? 
+		  The fundamental answer lies in a <b>break of a cryptographic hash function</b>, namely MD5. When Windows Update seeks to offer you a patch, an X.509 certificate
+          that is digitally signed by Microsoft is presented to your machine.
+		  The authors of Flame were able to create two <b>colliding</b> X.509 certificates (i.e. two unique certificates that hash to the same value in
+		  the signature field), where one of the certificates was indeed legitimate and trusted, and the other malicious certificate was never even seen by a CA.
+		  Since each X.509 had the same hash, both would have been deemed trustworthy when presented to a user who trusts Microsoft, i.e. any Windows machine.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  How did the authors figure out how to produce a collision in the MD5 hash function? By performing <b>differential cryptanalysis</b>, but they should not be given so much credit for
+		  this. In the year 2005, a chinese cryptographer Xaoiyun Wang and her group published a <a href="">paper</a>
+		  describing exactly how to find collisions in MD5. Not only that, but just a couple years later, Marc Stevens and others extended Wang's break to a more general case and 
+		  even described (and showed!) how it could be applied to produce <b>colliding X.509 certificates</b>. They successfully produced a bogus certificate (they call it a 
+		  <i>rogue</i> certificate) using their method and published the results (see <a href="">here</a>.)
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  So the real question is, <b>how was Microsoft foolish enough to use a broken hash function?</b> More than 5 years before Flame was even launched, the cryptographic community showed that MD5 was broken.
+		  They even showed how an attack could be launched against any CA who uses it ... yet Microsoft still decides to use it!
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  A possible defense to this question is that the complexity of the attack was remarkable and would have taken extreme care and talent. Allow me to elucidate in technical detail:
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  What Wang showed was how produce two, very specific messages, \(M\) and \(M'\), such that they collide under MD5:
+		  $$ \text{MD5}(M) = \text{MD5}(M') $$
+		  Stevens' extended Wang's work to a more general case, where each message could consist of distinct <i>prefixes</i>, \(P, P'\), main 'collision' blocks that are crafted to
+		  produce <i>colliding bits</i>, \(C, C'\), and arbitrary but identical <i>suffixes</i>, \(S, S'\), appended at the end:
+		  $$ \text{MD5}(M = PCS) = \text{MD5}(M' = P'C'S) $$
+		  This is useful because the structure of these prefixes, collision blocks, and suffixes can be applied to an X.509 certificate as follows:
+		  <img src="images/flame_roguex509.JPG" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:5px;height:590px; width:620px;">
+		  <p style="padding-bottom:6px;padding-top:0px;font-size:0.7em;text-align:center;">
+		    The colliding X.509's constructed by Stevens <i>et al.</i>. Flame's X.509's would have been similar, but not the same. Image taken but modified from Alex Sotirov’s company site: https://trailofbits.files.wordpress.com/2012/06/flame-md5.pdf
+		  </p>
+		  One can see that these certificates have a very particular structure. Furthermore, the serial number and validity period are solely determined by the CA. This means that the number of possible
+		  colliding messages is already quite constrained. One would have to be able to <i>guess</i> what the validity period and serial number would be in the legitimate certificate
+		  such that, with a lot of hard work, they could find the corresponding bits that would result in a collision (this is an example of defeating pre-image resistance). Personally, I at first 
+		  would have thought this impossible. As it turns out, the way that the serial numbers were assigned for Microsoft's X.509's was quite trivial:
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The serial number of a given certificate was the same as the serial number of the previously distributed certificate <b>incremented by one</b>. 
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The validity period was an incremental function of time. In particular, it was the amount of time that the issuing server was on for. 
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Due to the lack of randomness in these algorithms, the fields were able to be successfully predicted such that two distinct X.509's that hash to the same value -
+		  a collision - could be constructed.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  As mentioned earlier, not only did this malware spread through a cryptographically sophisticated means, it was also able to jump air gaps. Whenever the malware was put onto a computer,
+		  it would immediately search for peripheral devices. Microphones and video cameras would be used for recording if they were found, but if external drives such as USB sticks were found, the
+		  malware would covertly copy itself onto it. Any time this newly infected USB stick was plugged into a computer, it would immediately check the filesystem to see if Flame already existed on 
+		  the machine. If not, it would copy itself onto the new machine.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The malware was able to remain undetected on the USB due to a little Windows Explorer hack for naming files and folders. By default, the <i>current working directory</i> is identified
+          by a '.', i.e. if you were in a folder named '<i>Documents</i>' which contained a folder named '<i>Stuff</i>', you would need only switch to the Stuff directory by typing: 		  
+		</p>
+		<p style="font-style:courier;padding-bottom:15px;padding-top:10px;">
+		  cd ./Stuff/ 		  
+		</p>
+	    <p style="padding-bottom:15px;padding-top:10px;">
+		  Because of this, Windows does not generally allow users to name files or folders '.'. The authors of Flame bypassed this and named the folder containing the malicious code
+		  '.' by performing a raw filesystem write. This way, Windows Explorer could not identify aand therefore display the folder by default. So, humans would unknowingly spread the malware to
+		  machines that were potentially not even on some kind of network.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  The last thing that was interesting about Flame was its modular nature. For malware, the entire package was quite large (~20MB). It was composed of many different modules with different
+		  functionality. Whenever an HTTPS connection could be established to a machine running Flame, the authors could toggle various functionality on and off and even add new functionality if
+		  desired. A type of version control was even maintained by the malware; when a new infection was attempted by USB or otherwise, the malware would check which version of itself
+		  was running. If the USB had a newer version, it would update the old machine accordingly.  
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In conclusion, Flame was incredibly advanced. Because of its sophistication, it's unlikely that it was created by some rogue group of hackers. It is more likely that the speculations stating
+		  that the project was developed and funded by a nation state are accurate. Another tidbit to this end is that there were many similarities between the Flame malware and the malware discovered two years
+		  prior, again in Iran, named Stuxnet. Stuxnet was also incredibly advanced and was responsible for destroying some centrigues used for Iran's nuclear program. There has been much speculation
+		  that this attack was a joint effort between the U.S. government and Israeli government. I prefer not to point fingers, but rather agree with the likelihood it was backed by some government.
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="DH"><u>6. Diffie-Hellman Key Exchange</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  One of the biggest challenges in cryptography is the secure exchange of encryption keys. For example, for a private key (symmetric) protocol, each conversant needs to share a key.
+		  How does each conversant agree on a key and share what it is with each other? They could call each other on the telephone, but what if the phone is tapped? The same goes for text messages,
+		  e-mails, pretty much any instant messaging service -- they can all be hacked. A more secure way would be to personally deliver the key and exchange the information by word of mouth. But
+		  what if the conversant is on the other side of the world? Perhaps it is not possible to leave your location. There needs to be a way of sharing a key over a public channel with a high
+		  degree of security.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  This problem was addressed by <a href="https://en.wikipedia.org/wiki/Whitfield_Diffie" target="_blank">Whitfield Diffie</a> and 
+		  <a href="https://en.wikipedia.org/wiki/Martin_Hellman">Martin Hellman</a> in a 1976 <a href="https://www-ee.stanford.edu/~hellman/publications/24.pdf" target="_blank">publication</a>.
+		  The essence of the solution resides in the problem of discrete logarithms; for a known choice of \(a,b,n \in \mathbb{Z}\), how can one find \(x\) such that:
+		  $$ a^x = b\mod n $$
+		  The answer is ... we don't know! There is no general, efficient means of solving for x in the above equation. Diffie and Hellman made use of this fact and came up with
+		  the following procedure to perform key exchange:
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <ol>
+			<li>Alice and Bob want to communicate. They agree on two integers: a modulus \(p\) and a base \(g\), where \(g\) is a 
+			<a href = "https://en.wikipedia.org/wiki/Primitive_root_modulo_n">primitive root modulo \(p\)</a>.</li>
+			<li>Alice and Bob each choose a secret integer, \(x\) and \(y\), respectively.</li>
+			<li>Alice send Bob \(X = g^x \mod p\)</li>
+			<li>Bob send Alice \(Y = g^y \mod p\)</li>
+			<li>Alice computes \(k = Y^x \mod p\)</li>
+			<li>Bob computes \(k' = X^y \mod p\)</li>
+	      </ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  It is guaranteed that \(k = k' = g^{xy} \mod p\) -- the secret key! Thus, the eavesdropper can only acquire the secret key if they can compute discrete logarithms -- they would need
+		  to extract \(x\) from \(X\) and \(y\) from \(Y\). Since the best algorithm to do so has complexity greater than \(\mathcal{O}(\log_2 p)\), the algorithm is secure. Alice and Bob
+		  can scream \(X\) and \(Y\) across the street to each other while still maintaining a high degree of security.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  But can Alice and Bob exchange the agreed upon modulus, \(p\), and base, \(g\), in any way they like? Well, more security is always better than no security, so doing so covertly is ideal.
+		  However, the security of the algorithm is not jeopardized if \(p\) and \(g\) are made public -- any adversary would still have to guess the secret integers \(x\) and \(y\), which never
+		  need to be broadcasted. There is, however, restrictions on the choice of \(p\), namely:
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <ol>
+		    <li>\(p\) must be large</li>
+			<li>\((p-1)/2 \text{ must also be prime}\)</li>
+		  </ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In conclusion, if you would like to exchange keys with someone for communication, the Diffie-Hellman key exchange is a secure way of doing so.
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="QuantumCrypto"><u>7. Quantum Cryptography</u></a></h2>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In the most basic sense, quantum cryptography considers quantum mechanics when analyzing and constructing ciphers, protocols, or other cryptanalytic things. While the goals of 
+		  quantum cryptography are consistent with what I call classical cryptography (confidentiality, authentication, integrity, non-repudiation), it relies on the quantum treatment of 
+		  particles. In particular, it takes advantage of quantum information theory, where binary 0's and 1's are used to construct linear combinations, or superpositions, which describe quantum states.
+		  These quantum states are said to exist as both a 0 <b>and</b> a 1 simultaneously, and, more critically, can <i>interfere</i> with one another (or themselves!) quantum mechanically in such a way
+		  to aid computation. This is also referred to as quantum computation.
+		  These superpositions of 0's and 1's are referred to as<b>qubits</b> - they are the quantum analog to classical bits. Operations on qubits are known as quantum computations, and while it is possible
+		  to realize these operations, a large-scale quantum computer than can perform these operations on many qubits in a reliable and general manner has yet to be physically realized. Nonetheless,
+		  much of quantum cryptography is predicated on the eventual existence of a quantum computer.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  For those that are unfamiliar with quantum mechanics, this should sound weird and you likely don't understand what is meant by the above paragraph in any intuitive sense. That's okay!
+		  These states simply do not exist classically, they are purely of quantum origin, i.e. they are physically realized by individual particles, where quantum effects are dominant over familiar
+		  macroscopic effects. You've no reason to understand unless you've previously made a point to. If you would like to learn more about quantum mechanics, I would suggest reading <i>Quantum 
+		  Physics</i> by Gasiorowicz, or <i>Quantum Mechanics</i> by Griffiths. Also, check out my <a href="">physics tutorial</a>. 
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Now, moving on for the interested reader, I like to break the notion of quantum cryptography up into a few different groups, namely:
+		  <ol>
+		    <li>Quantum Algorithms (QA)/Quantum Computing</li>
+			<li>Quantum Key Distribution (QKD)</li>
+			<li>Quantum Resistant Algorithms (QRA)</li>
+		  </ol>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  A technical description of each of the above requires a knowledge of quantum mechanics. Because of this, I have chosen to write more about quantum cryptography in my 
+		  <a href="MyPage/physics.html" target="_blank">Physics Tutorial</a>, but here I can offer a qualitative sense of what they refer to.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <b>Quantum Algorithms</b> is pretty self-explanatory: it's a way of doing things quantum mechanically. Due to the principles of superposition and interference, it is possible to solved
+		  some problems that have classically been deemed hard - one can decrease the complexity of some problems through quantum mechanics. Quantum algorithms cannot help with every problem, but
+		  as of 2017 it seems that industry has found useful QA's for optimization problems.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <b>Quantum Key Distribution</b> is also pretty self-explanatory - it serves the same purpose as the Diffie-Hellman key exchange. The difference is that even if some mathematician
+		  devises a way to efficiently solve discrete logarithms, QKD will still be secure. QKD does not rely on mathematical complexity at all - its security is guaranteed by the physical laws of 
+		  quantum mechanics. In particular, if an adversary is trying to intercept information from a QKD channel, the attempt at doing so is easily detected by the conversants. For a quick example,
+		  the qubits in a QKD scheme are realize by photons; information can be encoded in the polarization states of photons. Conversants send photons with specific polarization states to each other
+	      with the aid of a laser, and each received photon needs to be measured to determine its polarization state. An adversary would also have to measure the photons through a <i>man-in-the-middle</i>
+		  attack to extract any information. The trouble for the adversary is that this measurement will force the polarization state of the intercepted photon to be something potentially different than what
+		  was sent, and this ruins the statistics that are collected on measured polarizations by each conversant.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <b>Quantum Resistant Algorithms</b> are generally not quantum algorithms. QRA's are any algorithm that cannot have their complexity reduced through quantum computation. As mentioned earlier,
+		  quantum algorithms cannot help in every problem, they can only help in some problems (this is a very active research topic in academia. <a href="" target="_blank">Scott Aaronson</a>
+		  is a leader in this field and has written much about this problem. I would recommend reading his book <i>Quantum Computing since Democritus</i> -- he has a very distinctive writing style).
+		  The strategy with QRA is to develop cryptgraphic protocols that don't care about whether or not a quantum computer ever exists and still rely on mathematical complexity. Lattice-based
+		  cryptography and elliptic curve cryptography play a role in QRA's.
+		</p>
+	</div>
+  </div>
+</body>
+</html>

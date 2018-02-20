@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Runyon's Realm</title>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/physics.css">
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script 
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      $(".sh-section-btn").on("click",function(){
+        $(this).parent().children(".h-section-cont").slideToggle(200);
+      });
+    });
+  </script>
+  <script>
+	  function showHide(shID) {
+		if (document.getElementById(shID)) {
+			if (document.getElementById(shID+'-show').style.display != 'none') {
+				document.getElementById(shID+'-show').style.display = 'none';
+				document.getElementById(shID).style.display = 'block';
+			}
+			else {
+				document.getElementById(shID+'-show').style.display = 'inline';
+				document.getElementById(shID).style.display = 'none';
+			}
+		}
+	  }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+  </script>
+</head>
+<body class="body page-index clearfix">
+  <div class="container clearfix">
+    <div class="footer clearfix">
+      <p class="text"><em>This is a personal web site. Blog posts, tutorials, and all other written content
+	  (including web site design and development) has been exclusively authored by Matt Runyon.
+	  The views expressed herein are solely those of the author and not of any organization that the author is affiliated with.
+	  They are also subject to change over time.</em>
+	  </p>
+    </div>
+     <p class="rightpanetitle RightPane-1"><b>Matt Runyon</b></p>
+    <button onClick="window.location='nutrition.php';" class="_button _button-1">Nutrition</button>
+    <button onClick="window.location='crypt.html';" class="_button _button-2">Cryptography</button>
+    <button onClick="window.location='physics.html';" class="_button _button-3">Physics</button>
+	<button onClick="window.location='fitness.html';" class="_button _button-4">Fitness</button>
+	<button onClick="window.location='tribes.html';" class="_button _button-5">Tribes</button>
+	<button onClick="window.location='aoe.html';" class="_button _button-6">Age of Empires</button>
+	<button onClick="window.location='machinelearning.html';" class="_button _button-7">Machine Learning</button>
+    <p class="contactlink"><a href="contact.html">Contact</a></p>
+    <p class="aboutpagelink"><a href="about.html">About This Page</a></p>
+    <p onClick="window.location='https://drive.google.com/open?id=0B_Fe1ZT6AqgZVGNvYTZ6dTJDNWc';" class="cvlink">Curriculum Vitae</p>
+    <p class="homelink"><a href="index.php">Blog</a></p>
+    <div class="rightbar clearfix">
+      <div class="rightbarcontent"></div>
+      <p class="aboutmatttext">Hi! <br><br>Welcome to my spot on the 'net. <br><br><u>Bio</u></p>
+	  <p class="biotext"><br>Matt Runyon is a Canadian engineer who is passionate about science, technology, fitness, and adventure.
+	  He holds a B. Eng. in Engineering Physics from Carleton University and a M.Sc. in Physics from the University of Ottawa.
+	  </p>
+    </div>
+    <p class="tutorialtitle tutorialtitle-2">Tutorials<br><br><br><br><br>Gaming</p>
+    <div class="leftbar"></div>
+    <div class="buttons"></div>
+    <div class="frontimage"></div>
+    <div class="menu"></div>
+    <div class="blog">
+	  <h1 style="font-size:1.5em;font-weight: bold;text-align:center;"><u>Physics</u></h1>
+		<p style="padding-top:10px;">
+<p style="padding-bottom:15px;padding-top:10px;">
+		  Now, moving on for the interested reader, I like to break the notion of quantum cryptography up into a few different groups, namely:
+		  <ol>
+		    <li>Quantum Algorithms (QA)</li>
+			<li>Quantum Key Distribution (QKD)</li>
+			<li>Quantum Resistant Algorithms (QRA)</li>
+		  </ol>
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Algorithms (QA)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  As <b>quantum algorithm</b> is an algorithm that exploits quantum features, such as the interference of qubits, to gain a computational advantage. In general, they're only truly useful
+		  when executed on a quantum computer but many can be modelled with a classical computer. A unique feature of quantum algorithm is that they are not deterministic - they are
+		  probabilistic! This means that if an algrithm is ran twice for the same input, it may not produce the same output. If the algorithm is good, there is only a high probability
+		  you will receive the correct answer*. The best way to further describe a quantum
+		  algorithm is probably through example, so let's just jump in and describe Shor's Algorithm.
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;font-size:0.8em;">
+		  <i>*Some quantum algorithms can indeed be cast in a deterministic form. See Gershenfeld and Chuang and Cory, Fahmy, and Havel.</i>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  <b>Shor's Algorithm</b>
+		</p>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In essence, Shor's algorithm provides a method for breaking group-based cryptosystems, such as RSA. The idea is to compute and store powers of a group element \(a \in \mathbb{Z^{*}_n}\)
+		  to give rise to the order of the element, \(r\), by aid of the Fourier Transform.
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Key Distribution (QKD)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  In an earlier section, I described the Diffie-Hellman key exchange, a secure method for conversants to exchange keys. There exists several other methods to exchange keys whose security
+		  is guaranteed by the laws of quantum mechanics, and these fall into the subfield of QKD. The first method to be published is known as BB84 protocol, which was named after its authors, 
+		  Bennett and Brassard, and published in 1984. It works like this:
+		</p>
+		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Resistant Algorithms (QRA)</b></u></a></h4>
+		<p style="padding-bottom:15px;padding-top:10px;">
+		  Also referred to as <b>post-quantum cryptography</b>, quantum resistant algorithms are encryption schemes that are believed to be secure assuming the existence of a quantum computer.
+		</p>
+		</p>
+	</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 400 1em/1.38 'Droid Serif';
+  color: rgb(240, 240, 240);
+  margin-top: 30px;
+}
+
+.aboutmatttext {
+  position: absolute;
+  top: 203px;
+  left: 4px;
+  z-index: 5;
+  width: 160px;
+  min-height: 31px;
+  border: 1px solid rgb(0, 0, 0);
+  background-image: url('../images/stonehaven.png');
+  font-size: 0.9em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.biotext {
+  position: absolute;
+  top: 320px;
+  left: 4px;
+  z-index: 5;
+  width: 160px;
+  min-height: 31px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  background-image: url('../images/stonehaven.png');
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.aboutpagelink {
+  position: absolute;
+  top: 418px;
+  left: 329px;
+  z-index: 10;
+  width: 140px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.aboutpagelink:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  color: rgb(5, 151, 254);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.article {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 17;
+  width: auto;
+  height: auto;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1em;
+  color: black;
+}
+
+.blog {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 18;
+  width: 663px;
+  height: 1143px;
+  margin-left: 168px;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  color: Black;
+}
+
+.image {
+  width:auto; /*width of your image*/
+  height:auto; /*height of your image*/
+  background-image:url('https://drive.google.com/open?id=0B_Fe1ZT6AqgZaGxfZ3JPdnFLUFE');
+  margin:0; /* If you want no margin */
+  padding:0; /*if your want to padding */
+}
+
+/* Expandable Box CSS */
+.hidden-section-container {
+  background-color:rgba(187, 187, 187, 0.93);
+  box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.sh-section-btn {
+  font-size:18px;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.h-section-cont {
+ padding:10px 10px;
+ background-color:#eee; 
+ display:none;
+}
+
+.more {
+	display: none;
+	border-top: 0px solid #666;
+	border-bottom: 0px solid #666; }
+a.showLink, a.hideLink {
+	text-decoration: none;
+	color: #36f;
+	padding-left: 8px;
+	background: transparent url('down.gif') no-repeat left; }
+a.hideLink {
+	background: transparent url('up.gif') no-repeat left; }
+a.showLink:hover, a.hideLink:hover {
+	border-bottom: 1px dotted #36f; }
+
+.buttons {
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 176px;
+  height: 322px;
+  margin: 28px 0 0 7px;
+}
+
+.contactlink {
+  position: absolute;
+  top: 418px;
+  left: 680px;
+  z-index: 11;
+  width: 66px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  height: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cvlink {
+  position: absolute;
+  top: 418px;
+  left: 491px;
+  z-index: 9;
+  width: 140px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  position: absolute;
+  top: 1593px;
+  left: 168px;
+  z-index: 17;
+  width: 663px;
+  height: 56px;
+  background-color: rgb(2, 2, 2);
+}
+
+.footer .text {
+  width: 640px;
+  height: 36px;
+  margin: 10px 0 0 1.65913%;
+  font-size: 0.688em;
+  line-height: 1;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.frontimage {
+  position: absolute;
+  top: 0;
+  left: 168px;
+  width: 663px;
+  height: 413px;
+  background-image: url('../images/mathematics-757566_1280.jpg');
+  background-size: cover;
+  background-position: left top;
+}
+
+.homelink {
+  position: absolute;
+  top: 418px;
+  left: 232px;
+  z-index: 8;
+  width: 48px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.aboutpagelink:active,
+.contactlink:active,
+.contactlink:hover,
+.cvlink:active,
+.cvlink:hover,
+.homelink:active,
+.homelink:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  color: rgb(8, 152, 253);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.leftbar {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 2;
+  width: 168px;
+  height: 1650px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(8, 152, 253);
+}
+
+.menu {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 7;
+  width: 663px;
+  height: 44px;
+  margin: 56px 0 0 168px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+.rightbar {
+  position: absolute;
+  top: -1px;
+  left: 831px;
+  z-index: 6;
+  width: 168px;
+  height: 1650px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(8, 152, 253);
+}
+
+.rightbarcontent {
+  position: relative;
+  float: left;
+  z-index: 4;
+  width: 160px;
+  height: 450px;
+  margin: 43px 0 0 4px;
+  background-image: url('../images/Matt2016(2).jpg');
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: 48% 0%;
+}
+
+.text {
+  float: left;
+}
+
+.tutorialtitle {
+  position: absolute;
+  /*height: 21px;*/
+  border: 1px double rgb(0, 0, 0);
+  background:#ffc;
+  font-size: 3em;
+  font-family:"Reenie Beanie",arial,sans-serif;
+  text-align: center;
+  text-decoration:none;
+  color:#000;
+  display:block;
+  height:12em;
+  width:10em;
+    /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform:rotate(-0deg);
+  -o-transform:rotate(-0deg);
+  -moz-transform:rotate(-0deg);
+}
+
+.rightpanetitle {
+  position: absolute;
+  height: 25px;
+  border: 1px double rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-size: 1em;
+  font-style: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.RightPane-1 {
+  top: 8px;
+  left: 833px;
+  z-index: 15;
+  width: 163px;
+}
+
+._button {
+  display: block;
+  position: absolute;
+  left: 20px;
+  width: 130px;
+  height: 35px;
+  /*border: 1px solid rgb(0, 0, 0);*/
+  /*border-radius: 3px;*/
+  /*background-image: url('../images/stonehaven.png');*/
+  background: transparent;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.text-2 {
+  position: relative;
+  clear: both;
+  z-index: 19;
+  width: 0.1002004008%;
+  margin: 41px 0 0 27.15431%;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+}
+
+.tutorialtitle-2 {
+  top: 9px;
+  left: 6px;
+  z-index: 3;
+  width: 156px;
+}
+/*   */
+button {
+  color: #454545;
+  background: transparent;
+  /*border-width: 2px;
+  border-style: solid;
+  border-color: #454545;*/
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+button:before,
+button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-color: #454545;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 1em;
+  height: 1em;
+  transition: all 0.3s ease-in-out;
+}
+button:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+  z-index: 5;
+}
+button:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+button:hover:before,
+button:hover:after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-color: #454545;
+}
+button:hover {
+  color: #454545;
+  border-color: #454545;
+}
+
+/*   */
+.container ._button-1 {
+  top: 187px;
+  z-index: 14;
+}
+
+.container ._button-2 {
+  top: 132px;
+  z-index: 13;
+}
+
+.container ._button-3 {
+  top: 77px;
+  z-index: 12;
+}
+
+.container ._button-4 {
+  top: 242px;
+  z-index: 13;
+}
+
+.container ._button-5 {
+  top: 410px;
+  z-index: 13;
+}
+
+.container ._button-6 {
+  top: 470px;
+  z-index: 13;
+}
+.container ._button-7 {
+  top: 300px;
+  z-index: 13;
+}
+
+.aboutpagelink a,
+.contactlink a,
+.cvlink a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.aboutpagelink a:active,
+.aboutpagelink a:hover,
+.contactlink a:active,
+.contactlink a:hover,
+.cvlink a:active,
+.cvlink a:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.homelink a,
+.text em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+ol {
+    margin-left: 2em;
+}
+
+ol li {
+    list-style-type: decimal;
+    list-style-position: outside;
+}

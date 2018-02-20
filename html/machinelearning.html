@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Runyon's Realm</title>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/MachineLearning.css">
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script 
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      $(".sh-section-btn").on("click",function(){
+        $(this).parent().children(".h-section-cont").slideToggle(200);
+      });
+    });
+  </script>
+  <script>
+	  function showHide(shID) {
+		if (document.getElementById(shID)) {
+			if (document.getElementById(shID+'-show').style.display != 'none') {
+				document.getElementById(shID+'-show').style.display = 'none';
+				document.getElementById(shID).style.display = 'block';
+			}
+			else {
+				document.getElementById(shID+'-show').style.display = 'inline';
+				document.getElementById(shID).style.display = 'none';
+			}
+		}
+	  }
+  </script>
+</head>
+<body class="body page-index clearfix">
+  <div class="container clearfix">
+    <div class="footer clearfix">
+      <p class="text"><em>This is a personal web site. Blog posts, tutorials, and all other written content
+	  (including web site design and development) has been exclusively authored by Matt Runyon.
+	  The views expressed herein are solely those of the author and not of any organization that the author is affiliated with.
+	  They are also subject to change over time.</em>
+	  </p>
+    </div>
+    <p class="rightpanetitle RightPane-1">Matt Runyon</p>
+    <button onClick="window.location='nutrition.php';" class="_button _button-1">Nutrition</button>
+    <button onClick="window.location='crypt.html';" class="_button _button-2">Cryptography</button>
+    <button onClick="window.location='physics.html';" class="_button _button-3">Physics</button>
+	<button onClick="window.location='fitness.html';" class="_button _button-4">Fitness</button>
+	<button onClick="window.location='tribes.html';" class="_button _button-5">Tribes</button>
+	<button onClick="window.location='aoe.html';" class="_button _button-6">Age of Empires</button>
+	<button onClick="window.location='machinelearning.html';" class="_button _button-7">Machine Learning</button>
+    <p class="contactlink"><a href="contact.html">Contact</a></p>
+    <p class="aboutpagelink"><a href="about.html">About This Page</a></p>
+    <p onClick="window.location='https://drive.google.com/open?id=0B_Fe1ZT6AqgZVGNvYTZ6dTJDNWc';" class="cvlink">Curriculum Vitae</p>
+    <p class="homelink"><a href="index.php">Blog</a></p>
+    <div class="rightbar clearfix">
+      <div class="rightbarcontent"></div>
+      <p class="aboutmatttext">Hi! <br><br>Welcome to my spot on the 'net. <br><br><u>Bio</u></p>
+	  <p class="biotext"><br>Matt Runyon is a Canadian engineer who is passionate about science, technology, fitness, and adventure.
+	  He holds a B. Eng. in Engineering Physics from Carleton University and a M.Sc. in Physics from the University of Ottawa.
+	  </p>
+    </div>
+    <p class="tutorialtitle tutorialtitle-2">Tutorials<br><br><br><br><br>Gaming</p>
+    <div class="leftbar"></div>
+    <div class="buttons"></div>
+    <div class="frontimage"></div>
+    <div class="menu"></div>
+    <div class="blog">
+      		<h1 style="font-size:1.5em;font-weight: bold;text-align:center;"><u>Machine Learning Journey</u></h1>
+		<p style="padding-top:10px;">
+         I wanted to get involved with machine learning, so here's what I did.
+		</p>
+		<h2 style="font-size:1.2em;font-weight: bold;padding-top:30px;"><u>Day 1</u></h2>
+		<p style="padding-top:10px;">
+            <ul>
+		        <li> 
+		            Downloaded Anaconda 3 + Python 3.6 installation
+                </li>		
+				<li> 
+		            Looked at tutorials and debated buying a Udemy course ... thought better of it
+                </li>	
+		    </ul>
+        </p>
+		<h2 style="font-size:1.2em;font-weight: bold;padding-top:30px;"><u>Day 2</u></h2>
+		<p style="padding-top:10px;">
+            <ul>
+		        <li> 
+		            Downloaded Anaconda 4.0.0 + Python 3.5.4 installation. Nice because it comes with useful libraries such as pandas, numpy, scipy, scikit-learn
+                </li>		
+				<li> 
+		            Looked at tutorials and debated buying a Udemy course ... thought better of it and went the free route :)
+                </li>	
+				<li> 
+		            Investigated a <a href=https://machinelearningmastery.com/machine-learning-in-python-step-by-step/>tutorial</a> on the <i>Iris flower data set</i> and began scripting!
+                </li>	
+		    </ul>
+        </p>
+		<h2 style="font-size:1.2em;font-weight: bold;padding-top:30px;"><u>Day 3</u></h2>
+		<p style="padding-top:10px;">
+		    I realized that there was a lot of terminology I was getting introduced to from the tutorial of day 2 and decided it best to pause and take
+		    a break for a more pedagogical approach. I found the Wikipedia page quite useful and took down some definitions (some modified):
+			
+			<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Machine Learning Tasks</u></h3>
+				<p class="def">
+					<u><b>Def</u><span class='n'>n</span>:</b> Machine learning is said to be <b>supervised</b> when a predictive model (function) is inferred from example input-output pairs.
+					A supervised machine learning algorithm uses a <b>training data set</b> consisting of an input object (a <b>vector</b>) and a desired output value (a <b>supervisory signal</b> or <b>target</b>).
+					The learning process attempts to categorize data into known categories. <br>
+					There are a few loosely named subcategories of supervised learning:
+				    <br><br>
+					    <b>Semi-supervised learning: </b> training data does not have complete information on the supervisory signal.
+                    <br><br>
+						<b>Active learning: </b>computer can only obtain training labels for a limited set of instances (based on a budget),
+						and also has to optimize its choice of objects to acquire labels for. When used interactively, these can be presented to the user for labeling.
+                    <br><br>
+						<b>Reinforcement learning: </b>training data (in form of rewards and punishments) is given only as feedback to the program's actions in a dynamic
+						environment, such as driving a vehicle or playing a game against an opponent.
+				</p>
+				<p class="def">
+					<u><b>Def</u><span class='n'>n</span>:</b> Machine learning is said to be <b>unsupervised</b> when a function is inferred from unlabelled data. Unsupervised algorithms
+					attempt to find hidden structure in data sets and discriminate between them in an initially undefined way. The learning process attempts to categorize data into
+					unknown categories.
+				</p>
+				<p class="def">
+					<u><b>Def</u><span class='n'>n</span>:</b> A <b>validation data set</b> is a data set that is used to evaluate a model's performance.
+					The validation dataset is similar to the training data and provides an opportunity for optimization.
+				</p>
+				<p class="def">
+					<u><b>Def</u><span class='n'>n</span>:</b> A <b>test dataset</b> is used to provide an unbiased evaluation of a final model.
+				</p>
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Machine Learning Applications</u></h3>
+        <p>
+			<b>Classification</b>: inputs are divided into two or more classes, and the learner must produce a model that assigns unseen inputs to one or more
+			(multi-label classification) of these classes. This is typically tackled in a supervised way. Spam filtering is an example of classification,
+			where the inputs are email (or other) messages and the classes are "spam" and "not spam".
+            <br><br>
+			<b>Regression</b>: also a supervised problem, the outputs are continuous rather than discrete.
+			<br><br>
+			<b>Clustering</b>: a set of inputs is to be divided into groups. Unlike in classification, the groups are not known beforehand, making this typically an unsupervised task.
+			<br><br>
+			<b>Density estimation</b>: finding the distribution of inputs in some space.
+		    <br><br>
+			<b>Dimensionality reduction</b>: simplifies inputs by mapping them into a lower-dimensional space. Topic modeling is a related problem,
+			where a program is given a list of human language documents and is tasked to find out which documents cover similar topics.
+        </p>
+		<!--
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Machine Learning Algorithms</u></h3>
+        <p>
+			<b>Classification</b>: inputs are divided into two or more classes, and the learner must produce a model that assigns unseen inputs to one or more
+			(multi-label classification) of these classes. This is typically tackled in a supervised way. Spam filtering is an example of classification,
+			where the inputs are email (or other) messages and the classes are "spam" and "not spam".
+            <br><br>
+			<b>Regression</b>: also a supervised problem, the outputs are continuous rather than discrete.
+			<br><br>
+			<b>Clustering</b>: a set of inputs is to be divided into groups. Unlike in classification, the groups are not known beforehand, making this typically an unsupervised task.
+			<br><br>
+			<b>Density estimation</b>: finding the distribution of inputs in some space.
+		    <br><br>
+			<b>Dimensionality reduction</b>: simplifies inputs by mapping them into a lower-dimensional space. Topic modeling is a related problem,
+			where a program is given a list of human language documents and is tasked to find out which documents cover similar topics.
+        </p>
+		-->
+		Many parts of machine learning are based in statistics, especially statistical modeling. In fact, there are many 'machine learning' models whose
+		fundamental formulation existed long before the advent of machine learning. I've taken the time to learn about six different models and when you
+		might want to use them.
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Logistic Regression</u></h3>
+		Logistic regression, AKA <i>logit</i> regression or <i>Maximum Entropy Classification</i>, is a linear statistical model that is used for classification.
+		It comes in two flavours, namely <b>binary</b> and <b>multinomial</b>, depending on if the output has two (binary) or more (multinomial) categories which inputs must be classified under.
+		Given an input vector \(X=x_1, x_2, ..., x_m\), logistic regression predicts the probability \(p_i\) of mapping \(X\) to category \(i\). In linear regression, one would assume \(p_i\) can be expressed
+ 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
+		between zero and one, so discussing a probability \(p_i\) on the LHS is invalid. Instead, we use the <a href="https://en.wikipedia.org/wiki/Logit">logit function</a> to discuss <i>log-odds</i>
+		instead of probabilities, $$\theta=\textrm{logit}(p_i)=\ln\left(\frac{p_i}{1-p_i}\right).$$ Thus, we assume the log-odds is a linear function of the input, $$\textrm{logit}(p_i)=X \cdot \mathbf{\beta}.$$
+		The goal of logistic regression is to provide the probability \(p_i\) that an input \(X\) belongs to category \(i\). This can be calculated with the inverse logit function,
+		$$p_i=\textrm{logit}^{-1}(\theta)=\left(\frac{e^{\theta}}{1+e^{\theta}}\right).$$
+
+		<p class="input">
+		    <b>Input:</b> The input can be a vector of arbitrary dimension. The vector components may be of any type: real-valued, binary, categorical, etc., though inputs are
+			often encoded as binary (True or False, e.g., 'Is-Male', 'Is-Under-35', etc.)
+		</p>
+		<p class="output">
+		    <b>Output:</b> For binary logit regression, the output is either true or false (binary). For multinomial logit regression, the output can be a higher dimensional vector with arbitrary
+			component types. 
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: The output is categorical and discrete, the input is either categorical or continuous, there are no outliers, there is no
+			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>.
+		</p>
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>K Nearest Neighbours (KNN)</u></h3>
+        Blah
+		<p class="input">
+		    <b>Input:</b> The input can be a vector of arbitrary dimension. The vector components may be of any type: real-valued, binary, categorical, etc., though inputs are
+			often encoded as binary (True or False, e.g., 'Is-Male', 'Is-Under-35', etc.)
+		</p>
+		<p class="output">
+		    <b>Output:</b> For binary logit regression, the output is either true or false (binary). For multinomial logit regression, the output can be a higher dimensional vector with arbitrary
+			component types. 
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: The output is categorical and discrete, the input is either categorical or continuous, there are no outliers, there is no
+			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>.
+		</p>			
+	</div>
+  </div>
+</body>
+</html>

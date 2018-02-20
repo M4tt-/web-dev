@@ -1,0 +1,396 @@
+/*body {
+  background-color: rgb(255, 255, 255);
+  font: 400 1em/1.38 'Droid Serif';
+  color: rgb(0, 0, 0);
+}*/
+
+.aboutmatttext {
+  position: absolute;
+  top: 206px;
+  left: 13px;
+  z-index: 6;
+  width: 176px;
+  min-height: 31px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(222, 222, 222);
+  font-size: 0.813em;
+  color: rgb(0, 0, 0);
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: left;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.aboutmatttitle {
+  float: left;
+  width: 176px;
+  height: 21px;
+  margin: 10px 0 0 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(0deg, rgb(255, 255, 255) 100%, rgb(0, 0, 0) 100%) rgba(7, 19, 226, 0);
+  background:    -moz-linear-gradient(0deg, rgb(255, 255, 255) 100%, rgb(0, 0, 0) 100%) rgba(7, 19, 226, 0);
+  background:      -o-linear-gradient(0deg, rgb(255, 255, 255) 100%, rgb(0, 0, 0) 100%) rgba(7, 19, 226, 0);
+  background:     -ms-linear-gradient(0deg, rgb(255, 255, 255) 100%, rgb(0, 0, 0) 100%) rgba(7, 19, 226, 0);
+  background:         linear-gradient(450deg, rgb(255, 255, 255) 100%, rgb(0, 0, 0) 100%) rgba(7, 19, 226, 0);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.aboutpagelink {
+  position: absolute;
+  top: 418px;
+  left: 329px;
+  z-index: 11;
+  width: 140px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.aboutpagelink:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  color: rgb(5, 151, 254);
+}
+
+.article {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 17;
+  width: 600px;
+  height: auto;
+  margin-left: 200px;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1em;
+}
+
+}
+.blog {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 17;
+  width: 600px;
+  height: 4549px;
+  margin-left: 200px;
+  overflow: scroll;
+}
+
+
+/* Expandable Box CSS */
+.hidden-section-container {
+  background-color:rgba(187, 187, 187, 0.93);
+  box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.sh-section-btn {
+  font-size:18px;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.h-section-cont {
+ padding:10px 10px;
+ background-color:#eee; 
+ display:none;
+}
+
+.more {
+	display: none;
+	border-top: 0px solid #666;
+	border-bottom: 0px solid #666; }
+a.showLink, a.hideLink {
+	text-decoration: none;
+	color: #36f;
+	padding-left: 8px;
+	background: transparent url('down.gif') no-repeat left; }
+a.hideLink {
+	background: transparent url('up.gif') no-repeat left; }
+a.showLink:hover, a.hideLink:hover {
+	border-bottom: 1px dotted #36f; }
+
+.buttons {
+  position: relative;
+  float: left;
+  z-index: 1;
+  width: 176px;
+  height: 322px;
+  margin: 28px 0 0 7px;
+}
+
+.contactlink {
+  position: absolute;
+  top: 418px;
+  left: 680px;
+  z-index: 12;
+  width: 66px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.cvlink {
+  position: absolute;
+  top: 418px;
+  left: 491px;
+  z-index: 10;
+  width: 140px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.frontimage {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 600px;
+  height: 411px;
+  background-image: url('../images/mathematics-757566_1280.jpg');
+  background-size: cover;
+  background-position: left top;
+  opacity: 1;
+}
+
+.homelink {
+  position: absolute;
+  top: 418px;
+  left: 232px;
+  z-index: 9;
+  width: 48px;
+  min-height: 21px;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.aboutpagelink:active,
+.contactlink:active,
+.contactlink:hover,
+.cvlink:active,
+.cvlink:hover,
+.homelink:active,
+.homelink:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  color: rgb(8, 152, 253);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.leftbar {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  z-index: 2;
+  width: 200px;
+  height: 800px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(8, 152, 253);
+}
+
+.menu {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 601px;
+  height: 44px;
+  margin: 406px 0 0 16px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+}
+
+.rightbar {
+  position: absolute;
+  top: -1px;
+  left: 800px;
+  z-index: 7;
+  width: 200px;
+  height: 800px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(8, 152, 253);
+}
+
+.rightbarcontent {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 5;
+  width: 176px;
+  height: 449px;
+  margin: 9px 0 0 13px;
+  background-image: url('../images/Matt2016(2).jpg');
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: 48% 0%;
+}
+
+.tutorialtitle {
+  position: absolute;
+  width: 176px;
+  height: 21px;
+  border: 1px double rgb(0, 0, 0);
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._button {
+  display: block;
+  position: absolute;
+  left: 7px;
+  width: 176px;
+  height: 35px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.tutorialtitle-1 {
+  top: 9px;
+  left: 813px;
+  z-index: 18;
+}
+
+.tutorialtitle-2 {
+  top: 7px;
+  left: 7px;
+  z-index: 3;
+}
+
+.container ._button-1 {
+  top: 105px;
+  z-index: 15;
+}
+
+.container ._button-2 {
+  top: 70px;
+  z-index: 14;
+}
+
+.container ._button-3 {
+  top: 35px;
+  z-index: 13;
+}
+
+.container ._button-4 {
+  top: 140px;
+  z-index: 13;
+}
+
+.aboutpagelink a,
+.contactlink a,
+.cvlink a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.aboutpagelink a:active,
+.aboutpagelink a:hover,
+.contactlink a:active,
+.contactlink a:hover,
+.cvlink a:active,
+.cvlink a:hover {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  cursor: hand;
+  cursor: pointer;
+}
+
+.homelink a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+  cursor: hand;
+  cursor: pointer;
+}
+
+ol {
+    margin-left: 2em;
+}
+
+ol li {
+    list-style-type: decimal;
+    list-style-position: outside;
+}
