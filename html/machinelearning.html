@@ -167,11 +167,14 @@
 		Many parts of machine learning are based in statistics, especially statistical modeling. In fact, there are many 'machine learning' models whose
 		fundamental formulation existed long before the advent of machine learning. I've taken the time to learn about six different models and when you
 		might want to use them.
+		
+		<!-- LOGISTIC REGRESSION -->
+		
 		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Logistic Regression</u></h3>
 		Logistic regression, AKA <i>logit</i> regression or <i>Maximum Entropy Classification</i>, is a linear statistical model that is used for classification.
 		It comes in two flavours, namely <b>binary</b> and <b>multinomial</b>, depending on if the output has two (binary) or more (multinomial) categories which inputs must be classified under.
 		Given an input vector \(X=x_1, x_2, ..., x_m\), logistic regression predicts the probability \(p_i\) of mapping \(X\) to category \(i\). In linear regression, one would assume \(p_i\) can be expressed
- 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
+ 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = \beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
 		between zero and one, so discussing a probability \(p_i\) on the LHS is invalid. Instead, we use the <a href="https://en.wikipedia.org/wiki/Logit">logit function</a> to discuss <i>log-odds</i>
 		instead of probabilities, $$\theta=\textrm{logit}(p_i)=\ln\left(\frac{p_i}{1-p_i}\right).$$ Thus, we assume the log-odds is a linear function of the input, $$\textrm{logit}(p_i)=X \cdot \mathbf{\beta}.$$
 		The goal of logistic regression is to provide the probability \(p_i\) that an input \(X\) belongs to category \(i\). This can be calculated with the inverse logit function,
