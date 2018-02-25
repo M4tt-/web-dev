@@ -167,11 +167,14 @@
 		Many parts of machine learning are based in statistics, especially statistical modeling. In fact, there are many 'machine learning' models whose
 		fundamental formulation existed long before the advent of machine learning. I've taken the time to learn about six different models and when you
 		might want to use them.
+		
+		<!-- LOGISTIC REGRESSION -->
+		
 		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Logistic Regression</u></h3>
 		Logistic regression, AKA <i>logit</i> regression or <i>Maximum Entropy Classification</i>, is a linear statistical model that is used for classification.
 		It comes in two flavours, namely <b>binary</b> and <b>multinomial</b>, depending on if the output has two (binary) or more (multinomial) categories which inputs must be classified under.
 		Given an input vector \(X=x_1, x_2, ..., x_m\), logistic regression predicts the probability \(p_i\) of mapping \(X\) to category \(i\). In linear regression, one would assume \(p_i\) can be expressed
- 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
+ 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = \beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
 		between zero and one, so discussing a probability \(p_i\) on the LHS is invalid. Instead, we use the <a href="https://en.wikipedia.org/wiki/Logit">logit function</a> to discuss <i>log-odds</i>
 		instead of probabilities, $$\theta=\textrm{logit}(p_i)=\ln\left(\frac{p_i}{1-p_i}\right).$$ Thus, we assume the log-odds is a linear function of the input, $$\textrm{logit}(p_i)=X \cdot \mathbf{\beta}.$$
 		The goal of logistic regression is to provide the probability \(p_i\) that an input \(X\) belongs to category \(i\). This can be calculated with the inverse logit function,
@@ -187,8 +190,11 @@
 		</p>
 		<p class="usewhen">
 		    <b>Used When</b>: The output is categorical and discrete, the input is either categorical or continuous, there are no outliers, there is no
-			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>.
+			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>. Logit Regression is conventionally used when there are only two classes.
 		</p>
+				
+		<!-- KNN -->
+		
 		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>K Nearest Neighbours (KNN)</u></h3>
         KNN is a machine learning algorithm that is used for classification and regression. KNN takes an input \{X\) and maps it to a category \(i\). To do so,
         it merely looks at the training data (which is already classified) and calculates how <i>close</i> \(X\) is to its \(k\) nearest neighbours. There are a few things
@@ -224,7 +230,39 @@
 		<p class="usewhen">
 		    <b>Used When</b>: The output is categorical and discrete, the input is continuous and of low dimension, and the data is not 'smeared', meaning the features in the feature
 			space are chosen such that the output categories have significant contrast.
-		</p>			
+		</p>
+				
+		<!-- LINEAR DISCRIMINANT ANALYSIS -->
+		
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Linear Discriminant Analysis (LDA)</u></h3>
+        LDA is a machine learning algorithm that is commonly used for <i>dimensionality reduction</i> and classification. LDA takes an input \{X\) and maps it to a category \(i\). To do so,
+      
+		<p class="input">
+		    <b>Input:</b> The input can be a vector of arbitrary dimension, but no higher than the training data set. 
+			The vector components are generally numeric.
+		</p>
+		<p class="output">
+		    <b>Output:</b> The output is a class.
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: The data is gaussian, there are two or more classes, and each observable has roughly the same variance.
+		</p>
+
+		<!-- SUPPORT VECTOR MACHINES -->
+		
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Support Vector Machine (SVM)</u></h3>
+        SVM is a 
+      
+		<p class="input">
+		    <b>Input:</b> 
+		</p>
+		<p class="output">
+		    <b>Output:</b> 
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: 
+		</p>
+		
 	</div>
   </div>
 </body>
