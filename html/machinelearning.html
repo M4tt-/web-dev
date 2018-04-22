@@ -104,7 +104,25 @@
 		<p style="padding-top:10px;">
 		    I realized that there was a lot of terminology I was getting introduced to from the tutorial of day 2 and decided it best to pause and take
 		    a break for a more pedagogical approach. I found the Wikipedia page quite useful and took down some definitions (some modified):
-			
+		
+			<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Machine Learning Definition</u></h3>
+			<p class="def">
+				<u><b>Def</u><span class='n'>n</span>:</b> M "the field of study that gives computers the ability to learn without
+				 being explicitly programmed."
+			</p>
+			<p class="def">
+				<u><b>Def</u><span class='n'>n</span>:</b> "A computer program is said to learn from experience E with respect to some class
+				 of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
+			</p>
+			<p class="def">
+				<u><b>Def</u><span class='n'>n</span>:</b> A <b>validation data set</b> is a data set that is used to evaluate a model's performance.
+				The validation dataset is similar to the training data and provides an opportunity for optimization.
+			</p>
+			<p class="def">
+				<u><b>Def</u><span class='n'>n</span>:</b> A <b>test dataset</b> is used to provide an unbiased evaluation of a final model.
+			</p>
+
+
 			<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Machine Learning Tasks</u></h3>
 				<p class="def">
 					<u><b>Def</u><span class='n'>n</span>:</b> Machine learning is said to be <b>supervised</b> when a predictive model (function) is inferred from example input-output pairs.
@@ -167,11 +185,14 @@
 		Many parts of machine learning are based in statistics, especially statistical modeling. In fact, there are many 'machine learning' models whose
 		fundamental formulation existed long before the advent of machine learning. I've taken the time to learn about six different models and when you
 		might want to use them.
+		
+		<!-- LOGISTIC REGRESSION -->
+		
 		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Logistic Regression</u></h3>
 		Logistic regression, AKA <i>logit</i> regression or <i>Maximum Entropy Classification</i>, is a linear statistical model that is used for classification.
 		It comes in two flavours, namely <b>binary</b> and <b>multinomial</b>, depending on if the output has two (binary) or more (multinomial) categories which inputs must be classified under.
 		Given an input vector \(X=x_1, x_2, ..., x_m\), logistic regression predicts the probability \(p_i\) of mapping \(X\) to category \(i\). In linear regression, one would assume \(p_i\) can be expressed
- 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
+ 		as, $$p_i = \mathbf{\beta} \cdot X,$$ where \(\mathbf{\beta} = \beta_0, \beta_1, ..., \beta_{m+1}\) are the <b>regression coefficients</b>. The \(\mathbf{\beta} \cdot X\) term is not necessarily
 		between zero and one, so discussing a probability \(p_i\) on the LHS is invalid. Instead, we use the <a href="https://en.wikipedia.org/wiki/Logit">logit function</a> to discuss <i>log-odds</i>
 		instead of probabilities, $$\theta=\textrm{logit}(p_i)=\ln\left(\frac{p_i}{1-p_i}\right).$$ Thus, we assume the log-odds is a linear function of the input, $$\textrm{logit}(p_i)=X \cdot \mathbf{\beta}.$$
 		The goal of logistic regression is to provide the probability \(p_i\) that an input \(X\) belongs to category \(i\). This can be calculated with the inverse logit function,
@@ -187,22 +208,79 @@
 		</p>
 		<p class="usewhen">
 		    <b>Used When</b>: The output is categorical and discrete, the input is either categorical or continuous, there are no outliers, there is no
-			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>.
+			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>. Logit Regression is conventionally used when there are only two classes.
 		</p>
+				
+		<!-- KNN -->
+		
 		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>K Nearest Neighbours (KNN)</u></h3>
-        Blah
+        KNN is a machine learning algorithm that is used for classification and regression. KNN takes an input \{X\) and maps it to a category \(i\). To do so,
+        it merely looks at the training data (which is already classified) and calculates how <i>close</i> \(X\) is to its \(k\) nearest neighbours. There are a few things
+        to point out:
+        <ol>
+		  <li>
+            \(k\) is an integer that is chosen by the teacher. Usually \(k=2n+1\) so that there is always a majority. For example, imagine that \(k=2\) and \(X\) had the two neighbours
+			\(y_1 \in i\) and \(y_2 \in j\). Here, the classification of \(X\) being \(i\) is as valid as \(X\) being j. If \(k\) is odd, this would never happen. 
+          </li>	
+          <li>
+            <i>Close</i> is defined by the user. If the data is numeric, one may use the Euclidean distance to calculate how <i>close</i> \(X\) is to the \(k\) nearest
+            points in the training data. This is common, but not the only metric (see <a href="https://en.wikipedia.org/wiki/Hamming_distance">Hamming Distance</a>,
+            <a href="https://en.wikipedia.org/wiki/Jaccard_index">Jaccard Index</a>, and <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine distance</a>).
+          </li>
+		   <li>
+            <i>Close</i> can also be influenced by a user-defined weighting scheme. For example, perhaps we'd like to weight closer neighbours more heavily,
+			or weight one particular component of the feature space higher than others.
+          </li>
+          <li>
+            The space in which the distance metric is computed is chosen by the user and is known as a <i>feature space</i>. For example, one may choose the feature space 
+            to be an arbitrary subspace of the training data (we can call each element in the training set a training <i>vector</i> of some vector space, to be more mathematical).
+          </li>				  
+        </ol>		  
+		Thus, when we talk about KNN, we need to specify four things: the number of neighbours to look at, the distance metric, the weighting scheme, and finally how classification
+		is ultimately assigned. \(X\) is generally assigned to the class making the majority of the \(k\) nearest neighbours. 
 		<p class="input">
-		    <b>Input:</b> The input can be a vector of arbitrary dimension. The vector components may be of any type: real-valued, binary, categorical, etc., though inputs are
-			often encoded as binary (True or False, e.g., 'Is-Male', 'Is-Under-35', etc.)
+		    <b>Input:</b> The input can be a vector of arbitrary dimension, but no higher than the training data set. 
+			The vector components are generally numeric.
 		</p>
 		<p class="output">
-		    <b>Output:</b> For binary logit regression, the output is either true or false (binary). For multinomial logit regression, the output can be a higher dimensional vector with arbitrary
-			component types. 
+		    <b>Output:</b> The output is a class.
 		</p>
 		<p class="usewhen">
-		    <b>Used When</b>: The output is categorical and discrete, the input is either categorical or continuous, there are no outliers, there is no
-			<a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>.
-		</p>			
+		    <b>Used When</b>: The output is categorical and discrete, the input is continuous and of low dimension, and the data is not 'smeared', meaning the features in the feature
+			space are chosen such that the output categories have significant contrast.
+		</p>
+				
+		<!-- LINEAR DISCRIMINANT ANALYSIS -->
+		
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Linear Discriminant Analysis (LDA)</u></h3>
+        LDA is a machine learning algorithm that is commonly used for <i>dimensionality reduction</i> and classification. LDA takes an input \{X\) and maps it to a category \(i\). To do so,
+      
+		<p class="input">
+		    <b>Input:</b> The input can be a vector of arbitrary dimension, but no higher than the training data set. 
+			The vector components are generally numeric.
+		</p>
+		<p class="output">
+		    <b>Output:</b> The output is a class.
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: The data is gaussian, there are two or more classes, and each observable has roughly the same variance.
+		</p>
+
+		<!-- SUPPORT VECTOR MACHINES -->
+		
+		<h3 style="font-size:1.1em;font-weight: underline;padding-top:30px;padding-bottom:30px;"><u>Support Vector Machine (SVM)</u></h3>
+        SVM is a 
+      
+		<p class="input">
+		    <b>Input:</b> 
+		</p>
+		<p class="output">
+		    <b>Output:</b> 
+		</p>
+		<p class="usewhen">
+		    <b>Used When</b>: 
+		</p>
+		
 	</div>
   </div>
 </body>
