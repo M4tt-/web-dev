@@ -296,7 +296,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>340</td>
+			  <td>500</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>
@@ -495,7 +495,7 @@
 			<li>1 tsp basil</li>
 			<li>2 tsp garlic powder</li>
 			<li>1 tbsp lemon juice</li>
-			<li>0.5 cup quinoa</li>
+			<li>0.75 cup quinoa</li>
 			<li>1 tsp pepper</li>
 			<li>1 tsp cayenne pepper</li>
 			<li>1 tbsp Vegetable oil</li>
@@ -516,7 +516,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>375</td>
+			  <td>525</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>
@@ -818,7 +818,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>337</td>
+			  <td>450</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>
@@ -895,7 +895,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>225</td>
+			  <td>400</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>
@@ -1266,7 +1266,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>475</td>
+			  <td>500</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>
@@ -1594,12 +1594,12 @@
 		</div>
 		<!-- RECIPE 21 -->
 		
-		<p style="font-size:1em;font-weight: bold;padding-bottom:15px;padding-top:25px;">21. Breakfast: Two Egg Breakfast Bagel - 5 servings</p>
+		<p style="font-size:1em;font-weight: bold;padding-bottom:15px;padding-top:25px;">21. Breakfast: Three Egg Breakfast Bagel - 5 servings</p>
 		<a href="#" id="rec21-show" class="showLink" onclick="showHide('rec21');return false;">See this recipe!</a>
 		<div id="rec21" class="more">
 		  <u>Ingredients</u>
 		  <ul style="padding-bottom:10px;">
-		    <li>10 eggs</li> <!-- Re do for 270 g -->
+		    <li>15 eggs</li> <!-- Re do for 270 g -->
 		    <li>5 Kirkland bagel</li> <!-- Re do for 850 g -->
 			<li>20 slices of deli meat (I like capicola)</li>
 			<li>5 tbsp. ketchup </li>
@@ -1760,7 +1760,7 @@
 			</tr>
 		    <tr>
 		  	  <td>Calories (kcal)</td>
-			  <td>645</td>
+			  <td>625</td>
 		    </tr>
 		    <tr>
 			  <td>Protein (g)</td>

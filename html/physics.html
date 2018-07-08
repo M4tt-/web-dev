@@ -78,43 +78,99 @@
     <div class="blog">
 	  <h1 style="font-size:1.5em;font-weight: bold;text-align:center;"><u>Physics</u></h1>
 		<p style="padding-top:10px;">
-<p style="padding-bottom:15px;padding-top:10px;">
-		  Now, moving on for the interested reader, I like to break the notion of quantum cryptography up into a few different groups, namely:
+            Anyone who knows me knows that I love physics. The exactness about it, the intricacy. Take the simple example of a speeding car trying to stop before it hits another car some distance in front of it; 
+			what is the minimum distance the speeding car must be from the second car before applying the brakes without hitting it? Alternatively, if the braking distance between the two cars is known a priori, what
+			is the maximum speed the first car can achieve before it will be unable to stop without colliding with the second car? Just a basic understanding of physics and math allows us to answer these
+			questions fairly easily. 
+		</p>
+		<p style="padding-top:10px;">
+            Personally, I like light. I mean, I really, really, like light. When I used to tell people that I studied light in university, most wondered how the heck a university program can be about light (in truth,
+			there was much more than light, but it's still not a stretch to tell people that.)! But light is an extremely vast and important topic - for example, it's what enables you to read the
+			information on this page - and not just because you wouldn't be able to read in darkness! All of this text once started out as 1's and 0's stored in a computer before they were mysteriously <i>encoded</i> into
+			light from a laser beam. The light from the laser beam was then shot down thousands of kilometres of optical fibre and then converted back into 1's and 0's somewhere else so that your computer could interpret
+			and display the 1's and 0's as text again. Whoa, cool, right? 
+		</p>
+        <p style="padding-top:10px;">
+		  <u>More cool stuff you'll find here:</u>
 		  <ol>
-		    <li>Quantum Algorithms (QA)</li>
-			<li>Quantum Key Distribution (QKD)</li>
-			<li>Quantum Resistant Algorithms (QRA)</li>
+		  	<li><a href="physics.html#Light">Light: A Quantitative Glance</a></li>
+			    <ul>
+				<li><a href="physics.html#Rays">Ray Optics</a></li>
+				<li><a href="physics.html#Maxwell">Electromagnetic Optics: Maxwell's Equations</a></li>
+				<li><a href="physics.html#Polarization">Polarization</a></li>
+				<li><a href="physics.html#Expt">An Optical Experiment by Your's Truly</a></li>
+				<li><a href="physics.html#QuantumOptics">Quantum Optics</a></li>
+			    </ul>
+		    <li><a href="physics.html#Flashy">Flashy Physics: The Twin Paradox</a></li>
+			<li><a href="physics.html#QM">Interpretations of Quantum Mechanics</a></li>
+			<li><a href="physics.html#Exercises">Classic Exercises in Physics</a></li>
 		  </ol>
 		</p>
-		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Algorithms (QA)</b></u></a></h4>
-		<p style="padding-bottom:15px;padding-top:10px;">
-		  As <b>quantum algorithm</b> is an algorithm that exploits quantum features, such as the interference of qubits, to gain a computational advantage. In general, they're only truly useful
-		  when executed on a quantum computer but many can be modelled with a classical computer. A unique feature of quantum algorithm is that they are not deterministic - they are
-		  probabilistic! This means that if an algrithm is ran twice for the same input, it may not produce the same output. If the algorithm is good, there is only a high probability
-		  you will receive the correct answer*. The best way to further describe a quantum
-		  algorithm is probably through example, so let's just jump in and describe Shor's Algorithm.
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Light"><u>1. Light: A Quantitative Glance</u></a></h2>
+		<p style="padding-top:10px;">
+            There are many different ways we can talk about light, and some are better than others depending on what aspect of light we want to talk about. The following image
+			(which was inspired by Saleh & Teich's <i>Fundamentals of Photonics</i>) is useful to keep in mind:
+            <img src="images/OpticalPyramid.png" style="margin:0 auto;display: block;padding-top:10px;padding-bottom:10px;height:300px; width:400px;">
+			I call this the "optical theory pyramid". The optical pyramid summarizes the different theories of light and how we can talk about it, with the most fundamental and "correct" theories appearing
+			at the base of the pyramid. Let's start at the top of the pyramid with <i>Ray Optics</i>. When most people talk about light, they talk about it in the context of 'rays' -- a collection of straight
+			lines from the light source to the observer. This ray model is ancient and dates back thousands of years, but still remains relevant today, 
 		</p>
-		<p style="padding-bottom:15px;padding-top:10px;font-size:0.8em;">
-		  <i>*Some quantum algorithms can indeed be cast in a deterministic form. See Gershenfeld and Chuang and Cory, Fahmy, and Havel.</i>
+		<p style="padding-top:10px;">
+            The theory of <i>Wave Optics</i> is much newer relative to ray optics, and it dates back to around the time that Isaac Newton was alive. Here, the description of light as rays evolved into a more
+			sophisticated description of light as waves, which allowed for quantitative discussions of phenomena such as diffraction and interference.
 		</p>
-		<p style="padding-bottom:15px;padding-top:10px;">
-		  <b>Shor's Algorithm</b>
+		<p style="padding-top:10px;">
+            It was in the nineteenth century that James Clerk Maxwell formalized <i>Electromagnetic Optics</i>, an evolution to the theory of wave optics. Here, the description of light as waves was formalized
+            within the confines of vector calculus and augmented with properties known from electricty and magnetism. Electromagnetic optics describes light as a <i>vector field</i>, meaning that
+			light has a magnitude and a direction defined at every point in space. Today, electromagnetic optics provides the most accurate and encompassing description of
+			light within the limits of classical physics, that is, without incorporating quantum mechanics.
 		</p>
-		<p style="padding-bottom:15px;padding-top:10px;">
-		  In essence, Shor's algorithm provides a method for breaking group-based cryptosystems, such as RSA. The idea is to compute and store powers of a group element \(a \in \mathbb{Z^{*}_n}\)
-		  to give rise to the order of the element, \(r\), by aid of the Fourier Transform.
+		<p style="padding-top:10px;">
+            The most base model with which one can currently describe optical phenomena is <i>Quantum Optics</i>. Here, Maxwell's electromagnetic field is <i>quantized</i>, that is, light is decribed by
+            discrete entities known as photons rather than continuous fields. While the <i>notion</i> of a photon was introduced by Einstein as a 'quanta of light' in 1905, it wasn't until 1926 that the
+            word photon was coined by chemist Gilbert Lewis. This description of light offers more than the electromagnetic field description as it is able to describe light-matter interactions.
 		</p>
-		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Key Distribution (QKD)</b></u></a></h4>
-		<p style="padding-bottom:15px;padding-top:10px;">
-		  In an earlier section, I described the Diffie-Hellman key exchange, a secure method for conversants to exchange keys. There exists several other methods to exchange keys whose security
-		  is guaranteed by the laws of quantum mechanics, and these fall into the subfield of QKD. The first method to be published is known as BB84 protocol, which was named after its authors, 
-		  Bennett and Brassard, and published in 1984. It works like this:
+		<h3 style="padding-top: 20px;font-size:1.0em;"><a name="Rays"><u>Ray Optics</u></a></h3>
+		<p style="padding-top:10px;padding-bottom:10px;">
+            Ray optics, or geometrical optics, is one of the first things a student of optics will learn because it is the most intuitive.
+			Ray optics is concerned with the position and momentum (direction) of light rays, and ray optics plays by a few rules:
+			<ol style="padding-top:10px; padding-bottom:10px;">
+			  <li>Light travels in the form of rays (duh).</li>
+			  <li>A substance through which light can propagate (i.e., an <i>optical medium</i>) is characterized by the quantity $n \geq 1$ known as the <b>refractive index</b>.
+			      The refractive index is the ratio for how quickly light travels in vacuum (empty space) relative to the optical medium.</li>
+		      <li>The <b>optical path length</b>, $OPL$, is defined as the product of the distance $d$ light travels through a medium and the refractive index $n$ of the medium, $ OPL = nd $.
+			      If the refractive index is spatially variant throughout the optical medium, i.e., $n = n(x, y, z)$, then the optical path length takes a line integral form:
+                  $$	OPL = 	\int_{\mathcal{C}} n(x,y,z) ds, $$		 where $ds$ is a differential line element along the curve $\mathcal{C}$. </li>
+			  <li>The path that light takes through a medium is always the one that minimizes (and in some cases, maximizes) the time spent within the medium. This is known as <b>Fermat's Principle</b>.</li>
+			</ol>
+			With these postulates in hand, ray optics can be used to prove the Law of Reflection, Law of Refraction (Snell's Law), and many other 'laws' to do with imaging and lenses. In fact, ray optics
+			is especially useful in determining how and where objects will appear when viewed with lenses and mirrors. I came across a cool app made from the folks at the University of Colorado at Boulder
+			that demonstrates some basic modeling that can be done with ray optics and lens with respect to image formation. 
+			If you open this app, make sure you check the boxes "Many Rays" on the left and "Virtual Image" on the right. You can also play with the 
+			sliders that control the geometry of the lens.
 		</p>
-		<h4 style="padding-top: 20px;font-size:0.9em;font-weight: bold;"><u><b>Quantum Resistant Algorithms (QRA)</b></u></a></h4>
-		<p style="padding-bottom:15px;padding-top:10px;">
-		  Also referred to as <b>post-quantum cryptography</b>, quantum resistant algorithms are encryption schemes that are believed to be secure assuming the existence of a quantum computer.
+		<p style="padding-top:10px;">
+			<div style="position: relative; width: 500px; height: 379px; padding-left: 50px;">
+			    <a href="https://phet.colorado.edu/sims/geometric-optics/geometric-optics_en.html" style="text-decoration: none;" rel="external" target="_blank">
+			    <img src="https://phet.colorado.edu/sims/geometric-optics/geometric-optics-600.png" alt="Geometric Optics" style="border: none;" width="300" height="197"/>
+			    <div style="position: absolute; width: 200px; height: 80px; left: 50px; top: 58px; background-color: #FFF; opacity: 0.6; filter: alpha(opacity = 60);">
+			    </div><table style="position: absolute; width: 200px; height: 80px; left: 50px; top: 58px;"><tr>
+			    <td style="text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;">Click to Run</td></tr></table>
+			    </a>
+			</div>
 		</p>
+		<p style="padding-top:10px;padding-bottom:10px;">
+            I have seen some even more interesting simulations with ray optics by <a href="http://www2.optics.rochester.edu/workgroups/alonso/Home.html" target="_blank">Miguel Alonso</a>
+			from the University of Rochester. 
 		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Flashy"><u>2. Flashy Physics: The Twin Paradox</u></a></h2>
+		<p style="padding-top:10px;">
+            Usually the physics about stopping cars or billiard balls is not enough to inspire interest in physics (though it was for me). Usually more <i>flashy</i> physics is required! To this end,
+			I would refer people to read about special relativity, or the many-worlds interpretation of quantum mechanics. the <b>Twin Paradox</b> (if you don't want to see any math, just watch this
+			<a href="https://www.youtube.com/watch?v=oOL2d-5-pJ8" target="_blank">video</a>):
+		</p>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="QM"><u>3. Interpretations of Quantum Mechanics</u></a></h2>
+		<h2 style="padding-top: 20px;font-size:1.1em;font-weight: bold;"><a name="Exercises"><u>4. Classic Exercises in Physics</u></a></h2>
 	</div>
   </div>
 </body>

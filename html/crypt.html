@@ -672,7 +672,7 @@
 		  particles. In particular, it takes advantage of quantum information theory, where binary 0's and 1's are used to construct linear combinations, or superpositions, which describe quantum states.
 		  These quantum states are said to exist as both a 0 <b>and</b> a 1 simultaneously, and, more critically, can <i>interfere</i> with one another (or themselves!) quantum mechanically in such a way
 		  to aid computation. This is also referred to as quantum computation.
-		  These superpositions of 0's and 1's are referred to as<b>qubits</b> - they are the quantum analog to classical bits. Operations on qubits are known as quantum computations, and while it is possible
+		  These superpositions of 0's and 1's are referred to as <b>qubits</b> - they are the quantum analog to classical bits. Operations on qubits are known as quantum computations, and while it is possible
 		  to realize these operations, a large-scale quantum computer than can perform these operations on many qubits in a reliable and general manner has yet to be physically realized. Nonetheless,
 		  much of quantum cryptography is predicated on the eventual existence of a quantum computer.
 		</p>
@@ -691,27 +691,28 @@
 		  </ol>
 		</p>
 		<p style="padding-bottom:15px;padding-top:10px;">
-		  A technical description of each of the above requires a knowledge of quantum mechanics. Because of this, I have chosen to write more about quantum cryptography in my 
-		  <a href="MyPage/physics.html" target="_blank">Physics Tutorial</a>, but here I can offer a qualitative sense of what they refer to.
+		  Maybe one day I'll write about these in more detail, but for now I'd like to offer a qualitative sense of what they refer to:
 		</p>
 		<p style="padding-bottom:15px;padding-top:10px;">
-		  <b>Quantum Algorithms</b> is pretty self-explanatory: it's a way of doing things quantum mechanically. Due to the principles of superposition and interference, it is possible to solved
+		  <b>Quantum Algorithms</b> are algorithms that harness and exploit the laws of quantum mechanics to solve a problem. Due to the principles of superposition and interference, it is possible to solve
 		  some problems that have classically been deemed hard - one can decrease the complexity of some problems through quantum mechanics. Quantum algorithms cannot help with every problem, but
-		  as of 2017 it seems that industry has found useful QA's for optimization problems.
+		  as of 2017 it seems that industry has found useful QA's for optimization problems. In particular, the Canadian company D-Wave Systems, Inc. has taken advantage of quantum annealing to solve some 
+		  interesting optimization problems. 
 		</p>
 		<p style="padding-bottom:15px;padding-top:10px;">
-		  <b>Quantum Key Distribution</b> is also pretty self-explanatory - it serves the same purpose as the Diffie-Hellman key exchange. The difference is that even if some mathematician
+		  <b>Quantum Key Distribution</b> serves the same purpose as the Diffie-Hellman key exchange. The difference is that even if some mathematician
 		  devises a way to efficiently solve discrete logarithms, QKD will still be secure. QKD does not rely on mathematical complexity at all - its security is guaranteed by the physical laws of 
 		  quantum mechanics. In particular, if an adversary is trying to intercept information from a QKD channel, the attempt at doing so is easily detected by the conversants. For a quick example,
 		  the qubits in a QKD scheme are realize by photons; information can be encoded in the polarization states of photons. Conversants send photons with specific polarization states to each other
 	      with the aid of a laser, and each received photon needs to be measured to determine its polarization state. An adversary would also have to measure the photons through a <i>man-in-the-middle</i>
 		  attack to extract any information. The trouble for the adversary is that this measurement will force the polarization state of the intercepted photon to be something potentially different than what
-		  was sent, and this ruins the statistics that are collected on measured polarizations by each conversant.
+		  was sent, and this ruins the statistics that are collected on measured polarizations by each conversant. On a related note, check out an <a href="https://arxiv.org/pdf/1802.05810.pdf" target="_blank">article</a>
+		  that details an experiment I performed where entire images can be encrypted in the polarization state of a light field!
 		</p>
 		<p style="padding-bottom:15px;padding-top:10px;">
 		  <b>Quantum Resistant Algorithms</b> are generally not quantum algorithms. QRA's are any algorithm that cannot have their complexity reduced through quantum computation. As mentioned earlier,
-		  quantum algorithms cannot help in every problem, they can only help in some problems (this is a very active research topic in academia. <a href="" target="_blank">Scott Aaronson</a>
-		  is a leader in this field and has written much about this problem. I would recommend reading his book <i>Quantum Computing since Democritus</i> -- he has a very distinctive writing style).
+		  quantum algorithms cannot help in every problem, they can only help in some problems (this is an active research topic in academia. <a href="https://scottaaronson.com/" target="_blank">Scott Aaronson</a>
+		  has written much about problems that quantum mechanics can and cannot solve. I would recommend reading his book <i>Quantum Computing since Democritus</i> -- he has a very distinctive writing style).
 		  The strategy with QRA is to develop cryptgraphic protocols that don't care about whether or not a quantum computer ever exists and still rely on mathematical complexity. Lattice-based
 		  cryptography and elliptic curve cryptography play a role in QRA's.
 		</p>
